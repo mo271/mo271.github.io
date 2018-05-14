@@ -1,0 +1,19 @@
+---
+layout: paper
+type: journal
+arxiv: "1206.6992"
+doi: 10.4310/HHA.2013.v15.n1.a12
+fulltexturl: http://www.intlpress.com/site/pub/files/_fulltext/journals/hha/2013/0015/0001/HHA-2013-0015-0001-a012.pdf
+journal: hha
+authors:
+    - moritz
+title: Real equivariant bordism for elementary abelian 2-groups
+year: 2013
+volume: 15
+issue: 1
+pages: 235 -- 251
+---
+
+We give a description of real equivariant bordism for the group {% raw %}<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mo>=</mo><mrow><mi mathvariant="double-struck">Z</mi></mrow><mi mathvariant="normal">/</mi><mn>2</mn><mo>×</mo><mo>⋯</mo><mo>×</mo><mrow><mi mathvariant="double-struck">Z</mi></mrow><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">G=\mathbb{Z}/2\times\cdots\times\mathbb{Z}/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathbb">Z</span></span><span class="mord">/</span><span class="mord">2</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="minner">⋯</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathbb">Z</span></span><span class="mord">/</span><span class="mord">2</span></span></span></span>
+{% endraw %}, which is similar to the description of complex equivariant bordism for the group <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>S</mi><mn>1</mn></msup><mo>×</mo><mo>⋯</mo><mo>×</mo><msup><mi>S</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">S^1\times\cdots\times S^1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="minner">⋯</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span>
+ given by Hanke in [<a href="https://link.springer.com/article/10.1007/s00208-005-0648-0">Han05</a>, Theorem 1].
