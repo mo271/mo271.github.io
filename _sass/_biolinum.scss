@@ -1,0 +1,35 @@
+/*
+ * CSS-ified version of Atlas Grotesk Web.
+ * 
+ * 300    = Light
+ * 
+ * THE LICENSE BELOW ONLY APPLIES TO http://theran.lt/
+ */
+
+@font-face {
+    font-family: 'Linux Biolinum'; /* normal */
+    src: url('fonts/linux-biolinum/LinBiolinum_R.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linux Biolinum'; /* italic */
+    src: url('fonts/linux-biolinum/LinBiolinum_RI.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Linux Biolinum'; /* bold */
+    src: url('fonts/linux-biolinum/LinBiolinum_RB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linux Biolinum'; /* bold italic*/
+    src: url('fonts/linux-biolinum/LinBiolinum_RBI.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}

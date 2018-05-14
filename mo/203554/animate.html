@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Polytopal inclusions</title>
+<meta name="author" content="Moritz Firsching">
+<meta name="keywords" content="Platonic, inclusion, regular, polyhedron, polyhedron, Firsching, Moritz">
+<link rel="stylesheet" type="text/css" href="../../formate.css">
+<link rel="shortcut icon" href="m.png" type="image/png">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../../CindyJS/build/js/Cindy.js"></script>
+<script type="text/javascript" src="../../CindyJS/build/js/Cindy3D.js"></script>
+<script id="csinit" type="text/x-cindyscript">use("Cindy3D");
+
+
+TP = [[[[-0.301211, -0.593972, 0.612114], [0.428387, -0.431176, -0.616301], [0.683166, 0.447500, 0.493128]], [[-0.301211, -0.593972, 0.612114], [0.428387, -0.431176, -0.616301], [-0.555990, 0.543352, -0.230146]], [[0.428387, -0.431176, -0.616301], [0.683166, 0.447500, 0.493128], [-0.555990, 0.543352, -0.230146]], [[-0.301211, -0.593972, 0.612114], [0.683166, 0.447500, 0.493128], [-0.555990, 0.543352, -0.230146]]], [[[0.562781, 0.431731, 0.612114], [0.683166, 0.447500, 0.493128], [0.683166, -0.527441, 0.110087], [0.175233, -0.593972, 0.612114]], [[0.294036, 0.594527, -0.616301], [0.683166, 0.447500, 0.493128], [0.683166, -0.527441, 0.110087], [0.428387, -0.431176, -0.616301]], [[-0.165291, 0.594527, -0.616301], [0.294036, 0.594527, -0.616301], [0.428387, -0.431176, -0.616301], [-0.552839, -0.431176, -0.616301]], [[0.683166, -0.527441, 0.110087], [0.175233, -0.593972, 0.612114], [-0.301211, -0.593972, 0.612114], [-0.685934, -0.448610, -0.484754], [-0.552839, -0.431176, -0.616301], [0.428387, -0.431176, -0.616301]], [[0.562781, 0.431731, 0.612114], [0.175233, -0.593972, 0.612114], [-0.301211, -0.593972, 0.612114], [-0.435561, 0.431731, 0.612114]], [[-0.165291, 0.594527, -0.616301], [-0.552839, -0.431176, -0.616301], [-0.685934, -0.448610, -0.484754], [-0.685934, 0.526331, -0.101713]], [[-0.301211, -0.593972, 0.612114], [-0.685934, -0.448610, -0.484754], [-0.685934, 0.526331, -0.101713], [-0.435561, 0.431731, 0.612114]], [[-0.165291, 0.594527, -0.616301], [0.294036, 0.594527, -0.616301], [0.683166, 0.447500, 0.493128], [0.562781, 0.431731, 0.612114], [-0.435561, 0.431731, 0.612114], [-0.685934, 0.526331, -0.101713]]]]; 
+
+
+rot=.7;
+paar=TP;
+
+drawpair(pair):=(
+begin3d();
+Qfaces=pair_1;
+Pfaces=pair_2;
+forall(Qfaces,fillpoly3d(#,color->[1,0,0]));
+forall(Qfaces,drawpoly3d(#,size->.1,color->[0,0,0]));
+forall(Pfaces,drawpoly3d(#,size->.4));
+lookat3d([sin(rot)*5,cos(rot)*5,0],[0,0,0],[0,0,1]);
+end3d());
+drawpair(paar);
+</script>
+
+<script id="csdraw" type="text/x-cindyscript">
+
+
+</script>
+<script id="cstick" type="text/x-cindyscript">
+	zeit=time();
+	rot=(1000*(60*zeit_2+zeit_3)+zeit_4)/2000;
+	drawpair(paar)
+</script>
+
+<script type="text/javascript">
+        function executeCS(p) {
+			//document.getElementById("comment").body=p;
+                cdy.evokeCS("paar="+p+";");
+                cdy.evokeCS("drawpair(paar);");
+            }
+
+
+var cdy=createCindy({canvasname:"CSCanvas",scripts:"cs*",transform:[{scale:200}], visibleRect:[20,20,30,30]});
+</script>
+<script id="csoninit" type="text/x-cindyscript">cdy.evokeCS()</script>
+
+
+
+</head>
+
+<body>
+<div id="body">
+<div class="bg bitmap" style="background:gray;">
+</div>
+<div class="bg svg"><object type="image/svg+xml" data="animate_files/bg.html" height="100%" width="100%"></object></div>
+<div id="main">
+<table style="width:100%; margin-bottom:2.5ex;"><tbody><tr>
+<td style="font-size:125%; color:#000088; font-weight:bold;">Moritz Firsching</td>
+<td class="noprint" style="text-align:right;"><a href="http://page.mi.fu-berlin.de/moritz/index.html" class="homelink">back</a></td>
+</tr></tbody></table>
+<h1><a href="http://mathoverflow.net/a/154007/39495">Platonic inclusions</a></h1>
+  <canvas id="Cindy3D" style="border: none;" width="552" height="452"></canvas>
+    <button onclick="cdy.play()" type="button">Play</button>
+    <button onclick="cdy.stop()" type="button">Stop</button>
+  <!--  <button onclick="cdy.stop();cdy.evokeCS('reset()')" type="button">Reset</button>
+    <button onclick="cdy.evokeCS('next()')" type="button">Step</button>-->
+<script>
+	document.getElementById('start').checked = true;
+	//wert="DI";
+	//executeCS.call(this.wert);
+	//var test=executeCS("DI");
+</script><canvas id="CSCanvas" width="50" height="50" style="border:none"></canvas>
+<hr>
+Animation made with <a href="https://github.com/CindyJS">CindyJS</a>.
+</body>
+
+</html>

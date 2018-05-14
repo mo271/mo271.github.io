@@ -1,0 +1,102 @@
+#erstercontainer{float: left;
+				width: 30%;}
+#zweitercontainer{
+	margin-left: auto;
+	margin-right: auto;
+	width: 570px;}
+#drittercontainer{
+	float: right;
+	width: 112px;
+	}
+#dynatable-pagination-links-my-final-table{
+	margin: 0px;
+	padding-left: 3px;
+	}
+#tabellebottom{
+text-align: center
+}
+#kommentarlabel{
+   padding-right:2px;
+   }
+.jumbotron {
+    padding: 0.5em 0.6em;
+    }
+.page-header
+	{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.bootstrap-switch{
+	margin-top:12px;
+    margin-right:5px;
+    margin-left:5px;
+}
+.input-group{
+    margin-top: 12px;
+    margin-bottom: 2px;
+    max-width : 250px;
+}
+.input-group.label{
+    
+}
+
+li.list-group-item>h4{
+    margin:0px;}
+li.list-group-item>p{
+margin:3px}
+#my-final-table{margin-left: 0; padding-left: 0 }
+.dynatable-per-page{float:right;}
+div.row:nth-child(3){
+margin-left:0;
+margin-right:0}
+#side-menu.nav>li>a, #side-menu.nav>li>ul>li>a, #side-menu.nav>li>ul>li>ul>li>a  {
+padding-top:1px;
+padding-bottom:4px;}
+
+.navbar-header{
+white-space: nowrap;
+}
+.input-group-btn{
+    display:initial;
+}
+.mittelpic { font-size:16px;}
+.grosspic  { font-size: 20px;}
+.kleinpic  { font-size:12px; }
+.piclinks { float: right;}
+.modal-body>.pagination{ margin:0;}
+.komm{font-style:italic;}
+
+@media (min-width:768px){
+	.modal-dialog{
+		width:900px;
+		margin:30px auto
+	}
+    }
+    .navbar-form .form-control {
+    width: 135px;
+    
+    }
+    
+
+/* Sidebar Menu Styles */
+
+.arrow {
+    float: right;
+}
+
+.fa.arrow:before {
+    content: "\f104";
+}
+
+.active > a > .fa.arrow:before {
+    content: "\f107";
+}
+.fa-info-circle{
+	font-size: 14px;
+	}
+legend{
+	font-size: 14px;
+}
+.switchsprache {
+    margin-bottom: 6px;
+    }
