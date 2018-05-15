@@ -202,6 +202,31 @@ pre {
         }
     }
 }
+.icon--mathoverflow{
+
+    > svg {
+        height: 14px;
+        width: 70px;
+
+        polygon {
+          fill: $grey-color;
+
+        }
+    }
+}
+.icon--github{
+
+    > svg {
+        display: inline-block;
+        height: 14px;
+        width: 48px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
 
 /**
  * Description lists
