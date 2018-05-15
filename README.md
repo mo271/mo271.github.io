@@ -1,6 +1,6 @@
 # mo271.github.io
 
-This repo contains the [jekyll]() source for the page hosted at 
+This repo contains the [jekyll](https://jekyllrb.com/) source for the page hosted at 
 [page.mi.fu-berlin.de/moritz/](https://page.mi.fu-berlin.de/moritz/) and [mo271.github.io/](https://mo271.github.io/)
 
 
