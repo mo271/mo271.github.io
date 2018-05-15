@@ -129,6 +129,6 @@ layout: default
       doi = "{{page.doi}}"
     }
     {% endcapture %}{{ bibtex | markdownify }}
-</div
+</div>
 {% endif %}
 </div>
