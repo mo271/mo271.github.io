@@ -15,3 +15,6 @@
 
 [Kissing cylinders]({{site.baseurl}}/mo/cyl/kissing.html)
 :  a visualization of cylinders kissing a sphere
+
+[Hypercube unfoldings]({{site.baseurl}}/mo/198722/unfoldings)
+:  3d animations of all 261 unfodings of the 4-dimensional hypercube
