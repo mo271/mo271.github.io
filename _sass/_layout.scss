@@ -484,3 +484,34 @@ h2.page-heading {
 .katex { font-size: 1em !important;
         line-height: 1 !important;
        }
+div.game{
+  text-align: center;
+  padding-bottom: 35px;
+  border-bottom: 1px solid $grey-color-light;
+}
+#randomdate{
+  text-align: center;
+  cursor: pointer;
+}
+
+#date-table{
+  margin:auto;
+  margin:auto;
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+  li{
+    list-style-type: none;
+    margin: 5;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  li {
+    border-bottom: 1px solid $grey-color-light;
+}
+li:last-child
+{
+  border-bottom: none;
+}
+}

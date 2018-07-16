@@ -40,6 +40,12 @@ theme: minima
 plugins:
   - jekyll-seo-tag
 
+
+brandcolor:  2a7ae2
+backgroundcolor: fdfdfd
+greycolor: "828282"
+
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/{% if page.newtitlelink %}{{ page.newtitlelink }}{% endif %}">{% if page.newsitetitle %}{{ page.newsitetitle }}{% else %}{{ site.title }}{% endif %}</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
