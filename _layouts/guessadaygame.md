@@ -2,7 +2,7 @@
 layout: special
 
 ---
-{% assign linkurl = site.url | append: "/" | append: page.newtitlelink %}
+{% assign linkurl = site.baseurl | append: "/" | append: page.newtitlelink %}
 <div id="outer_div" class="game">
 <h1 id="randomdate"></h1>
 <ul id="date-table"><li id="0"></li><li id="1"></li><li id="2"></li><li id="3"></li><li id="4"></li><li id="5"></li><li id="6"></li></ul>

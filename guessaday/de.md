@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1><img class="guessaday-icon" alt="guessaday icon" src="{{ site.url }}/assets/images/ic_launcher-web.png" width="45"/>  Guessaday</h1>
+<h1><img class="guessaday-icon" alt="guessaday icon" src="{{ site.baseurl }}/assets/images/ic_launcher-web.png" width="45"/>  Guessaday</h1>
 <h2>Übe den Wochentag eines Datums zu bestimmen!
 </h2>
 Bei diesem Spiel wird ein Datum angezeigt und man soll den zugehörigen Wochentag herausfinden. Dann wird die Antwort überprüft. Du kannst <a href="{{ site.baseurl }}/guessaday/play/de">online spielen</a> oder mit einer Android App. Bei der App kann man mehr Einstellungen vornehmen (Zeit stoppen, einen eigenen Zeitraum wählen, ...).

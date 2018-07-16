@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1><img class="guessaday-icon" alt="guessaday icon" src="{{ site.url }}/assets/images/ic_launcher-web.png" width="45"/>  Guessaday</h1>
+<h1><img class="guessaday-icon" alt="guessaday icon" src="{{ site.baseurl }}/assets/images/ic_launcher-web.png" width="45"/>  Guessaday</h1>
 <h2>A trainer for calculating the day of the week of any given date
 </h2>
 In this game, a date is displayed and you are asked what day of the week that date is. Then your answer is checked.
