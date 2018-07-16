@@ -8,7 +8,7 @@ In this game, a date is displayed and you are asked what day of the week that da
  You can <a href="{{ site.baseurl }}/guessaday/play">play the game online</a> or as an android app. The app has more options (timing, choose your own date range, ...).
 
 
- [<img src="https://f-droid.org/badge/get-it-on.svg"
+ [<img src="https://f-droid.org/badge/get-it-on.png"
        alt="Get it on F-Droid"
        height="90">](https://f-droid.org/packages/com.goltzkiste.guessaday/)
  [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
