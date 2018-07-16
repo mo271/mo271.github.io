@@ -10,10 +10,10 @@ In this game, a date is displayed and you are asked what day of the week that da
 
  [<img src="https://f-droid.org/badge/get-it-on.png"
        alt="Get it on F-Droid"
-       height="90">](https://f-droid.org/packages/com.goltzkiste.guessaday/)
+       height="60">](https://f-droid.org/packages/com.goltzkiste.guessaday/)
  [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
        alt="Get it on Google Play"
-       height="90">](https://play.google.com/store/apps/details?id=com.goltzkiste.guessaday)
+       height="60">](https://play.google.com/store/apps/details?id=com.goltzkiste.guessaday)
 
 <p>Also available as app in the <a href="http://jolla.com/">jolla</a> store and you can find the  <a href="https://github.com/mo271/guessaday">open source code on github</a>
 

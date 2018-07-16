@@ -9,10 +9,10 @@ Bei diesem Spiel wird ein Datum angezeigt und man soll den zugehörigen Wochenta
 
  [<img src="https://f-droid.org/badge/get-it-on-de.png"
        alt="Jetzt bei F-Droid"
-       height="90">](https://f-droid.org/packages/com.goltzkiste.guessaday/)
+       height="60">](https://f-droid.org/packages/com.goltzkiste.guessaday/)
  [<img src="https://play.google.com/intl/en_us/badges/images/generic/de-play-badge.png"
        alt="Jetzt bei Google Play"
-       height="90">](https://play.google.com/store/apps/details?id=com.goltzkiste.guessaday)
+       height="60">](https://play.google.com/store/apps/details?id=com.goltzkiste.guessaday)
 
 <p>Ebenso verfügbar im <a href="http://jolla.com/">jolla</a> store und den <a href="https://github.com/mo271/guessaday">offenen Quellcode auf github</a> gibt's auch.
 
