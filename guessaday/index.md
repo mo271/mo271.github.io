@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1> Guessaday</h1>
+<h1><img class="guessaday-icon" alt="guessaday icon" src="{{ site.url }}/assets/images/ic_launcher-web.png" width="45"/>  Guessaday</h1>
 <h2>A trainer for calculating the day of the week of any given date
 </h2>
 In this game, a date is displayed and you are asked what day of the week that date is. Then your answer is checked.
@@ -67,4 +67,6 @@ Book (in German) <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum m
 <li><span>
 <a href="http://easycalculation.com/funny/shortcuts/day.php">easycalculation.com</a>
  </span></li></ul>
+</div><div class="noprint">
+<a class="select_language" href="{{ site.baseurl }}/guessaday/de">deutsche Version dieser Seite</a>
 </div>

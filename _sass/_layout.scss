@@ -21,6 +21,9 @@
     &:visited {
         color: $grey-color-dark;
     }
+    >img {
+      vertical-align: sub;
+    }
 }
 
 .site-nav {
@@ -487,10 +490,10 @@ h2.page-heading {
 div.game{
   text-align: center;
   padding-bottom: 35px;
-  border-bottom: 1px solid $grey-color-light;
 }
 div.noprint {
-  padding-top: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   border-top: 1px solid $grey-color-light;
 }
 

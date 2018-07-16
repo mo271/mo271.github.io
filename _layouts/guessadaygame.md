@@ -1,18 +1,17 @@
 ---
 layout: special
-newsitetitle: Guessaday
-newtitlelink: guessaday
-title: Guessaday
+
 ---
+{% assign linkurl = site.url | append: "/" | append: page.newtitlelink %}
 <div id="outer_div" class="game">
 <h1 id="randomdate"></h1>
 <ul id="date-table"><li id="0"></li><li id="1"></li><li id="2"></li><li id="3"></li><li id="4"></li><li id="5"></li><li id="6"></li></ul>
 </div>
-<div>
-<span><i>How to play:</i> Click on the correct day of the week for the random date displayed!
-</span></div><div><span>Click on the date or on the list of days to get a new date!</span>
+<div class="noprint"><div>
+{{ page.howtoplay | replace: '!SITE_URL!', linkurl  }}</div>
+</div><div class="noprint">
+{{ content }}
 </div>
-<div><span>Check out <a href="{{ site.baseurl }}/{{ page.newtitlelink }}">this site</a> for more information and an android app with much more options.</span></div>
 <script>
 var correct_day = -1;
 var state = 0;
@@ -22,7 +21,7 @@ var end = new Date(2050,11,31);
 var sunday = new Date(1985,10,3);
 var weekday = new Date(sunday);
 for (var i = 0; i < childs.length; i++){
-    childs[i].innerHTML = weekday.toLocaleDateString("en-US", {weekday: 'long'});
+    childs[i].innerHTML = weekday.toLocaleDateString("{{ page.language }}", {weekday: 'long'});
     childs[i].style.textDecoration = "none";
     childs[i].style.color = "initial";
     weekday.setDate(weekday.getDate() + 1);
@@ -34,7 +33,7 @@ correct_day = randomdate.getDay();
 var options = { year: 'numeric', month: 'long', day: 'numeric' };
 console.log(randomdate);
 console.log(correct_day);
-document.getElementById("randomdate").innerHTML = randomdate.toLocaleDateString("en-US", options);
+document.getElementById("randomdate").innerHTML = randomdate.toLocaleDateString("{{ page.language }}", options);
 state = 0;
 }
 
