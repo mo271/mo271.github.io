@@ -5,7 +5,7 @@ layout: default
 <h2>A trainer for calculating the day of the week of any given date
 </h2>
 In this game, a date is displayed and you are asked what day of the week that date is. Then your answer is checked.
- You can <a href="./play">play the game online</a> or as an android app. The app has more options (timing, choose your own date range, ...).
+ You can <a href="{{ site.baseurl }}/guessaday/play">play the game online</a> or as an android app. The app has more options (timing, choose your own date range, ...).
 
 
  [<img src="https://f-droid.org/badge/get-it-on.svg"
