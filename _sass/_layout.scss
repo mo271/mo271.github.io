@@ -489,6 +489,11 @@ div.game{
   padding-bottom: 35px;
   border-bottom: 1px solid $grey-color-light;
 }
+div.noprint {
+  padding-top: 15px;
+  border-top: 1px solid $grey-color-light;
+}
+
 #randomdate{
   text-align: center;
   cursor: pointer;

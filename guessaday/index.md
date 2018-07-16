@@ -18,7 +18,7 @@ In this game, a date is displayed and you are asked what day of the week that da
 <p>Also available as app in the <a href="http://jolla.com/">jolla</a> store and you can find the  <a href="https://github.com/mo271/guessaday">open source code on github</a>
 
 </p>
-<p>If you have any questions or comments, feel free to <a href="contact">contact</a> me. If you like the game, <a href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=Know%20what%20day%20of%20the%20week%20a%20given%20date%20is%3F%20Check%20out%20this%20game!&tw_p=tweetbutton&url=https%3A%2F%2Fgit.io%2FfNqSI" data-dnt="true" class="twitter-share-button" data-show-count="false">
+<p>If you have any questions or comments, feel free to <a href="{{ site.baseurl }}/contact">contact</a> me. If you like the game, <a href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=Know%20what%20day%20of%20the%20week%20a%20given%20date%20is%3F%20Check%20out%20this%20game!&tw_p=tweetbutton&url=https%3A%2F%2Fgit.io%2FfNqSI" data-dnt="true" class="twitter-share-button" data-show-count="false">
   <span class="twitter-icon">
   <svg  width="14px" height="14px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
@@ -42,7 +42,6 @@ C97.7,293.1,124.7,301.6,153.6,301.6"/>
 
 To support this project, you can send bitcoin to this address: [`1Guessas8CtCA9S9ZA9p9fCFAD3VZTE9ey`](bitcoin:1Guessas8CtCA9S9ZA9p9fCFAD3VZTE9ey).
 <div class="noprint">
-<hr>
 <h2>Learn how to calculate the day of the week</h2>
 <!--<p>A few links:
 </p>-->
@@ -68,3 +67,4 @@ Book (in German) <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum m
 <li><span>
 <a href="http://easycalculation.com/funny/shortcuts/day.php">easycalculation.com</a>
  </span></li></ul>
+</div>
