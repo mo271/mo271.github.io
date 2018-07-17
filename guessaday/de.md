@@ -17,7 +17,7 @@ Bei diesem Spiel wird ein Datum angezeigt und man soll den zugehörigen Wochenta
 <p>Ebenso verfügbar im <a href="http://jolla.com/">jolla</a> store und den <a href="https://github.com/mo271/guessaday">offenen Quellcode auf github</a> gibt's auch.
 
 </p>
-<p>Bei Fragen, Kommentaren oder Verbesserungsvorschlägen: <a href="{{ site.baseurl }}/contact">Kontakt</a>. Wenn Dir das Spiel gefällt, <a href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=Know%20what%20day%20of%20the%20week%20a%20given%20date%20is%3F%20Check%20out%20this%20game!&tw_p=tweetbutton&url=https%3A%2F%2Fgit.io%2FfNqSI" data-dnt="true" class="twitter-share-button" data-show-count="false">
+<p>Bei Fragen, Kommentaren oder Verbesserungsvorschlägen: <a href="{{ site.baseurl }}/contact">Kontakt</a>. Wenn Dir das Spiel gefällt, <a href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=Kannst%20Du%20den%20Wochentag%20f%C3%BCr%20ein%20zuf%C3%A4lliges%20Datum%20ausrechnen%3F%20Dann%20probiere%20dieses%20Spiel%20&tw_p=tweetbutton&url=https%3A%2F%2Fgit.io%2FfN3o6" data-dnt="true" class="twitter-share-button" data-show-count="false">
   <span class="twitter-icon">
   <svg  width="14px" height="14px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
@@ -58,7 +58,7 @@ Um das Projekt zu unterstützen, kannst Du ein wenig Bitcoin an folgende Adresse
   <a href="http://de.wikipedia.org/wiki/Gaußsche_Wochentagsformel">wiki/Gaußsche Wochentagsformel</a>
    </span></li>
 <li><span>
-Buch <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum menschlichen KalenderIn 7 Tagen zum menschlichen Kalender</a>, by <a href="http://vankoningsveld.de/">Jan van Koningsveld</a>
+Buch <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum menschlichen KalenderIn 7 Tagen zum menschlichen Kalender</a>, von <a href="http://vankoningsveld.de/">Jan van Koningsveld</a>
  </span></li>
  </ul>
 </div><div class="noprint">
