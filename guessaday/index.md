@@ -56,7 +56,7 @@ To support this project, you can send bitcoin to this address: [`1Guessas8CtCA9S
 <a href="http://www.wikihow.com/Calculate-the-Day-of-the-Week">wikihow.com</a>
 </span></li>
 <li><span>
-Book (in German) <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum menschlichen KalenderIn 7 Tagen zum menschlichen Kalender</a>, by <a href="http://vankoningsveld.de/">Jan van Koningsveld</a>
+Book (in German) <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum menschlichen Kalender</a>, by <a href="http://vankoningsveld.de/">Jan van Koningsveld</a>
  </span></li>
 <li><span>
 <a href="http://lifehacker.com/5848651/how-to-quickly-figure-out-the-day-of-the-week-any-date-falls-on">lifehacker.com</a>

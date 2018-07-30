@@ -58,7 +58,7 @@ Um das Projekt zu unterstützen, kannst Du ein wenig Bitcoin an folgende Adresse
   <a href="http://de.wikipedia.org/wiki/Gaußsche_Wochentagsformel">wiki/Gaußsche Wochentagsformel</a>
    </span></li>
 <li><span>
-Buch <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum menschlichen KalenderIn 7 Tagen zum menschlichen Kalender</a>, von <a href="http://vankoningsveld.de/">Jan van Koningsveld</a>
+Buch <a  href="http://www.amazon.de//dp/1484113667">In 7 Tagen zum menschlichen Kalender</a>, von <a href="http://vankoningsveld.de/">Jan van Koningsveld</a>
  </span></li>
  </ul>
 </div><div class="noprint">
