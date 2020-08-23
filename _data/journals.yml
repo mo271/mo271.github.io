@@ -7,4 +7,12 @@ exp-math:
 math-prog:
     title: Mathematical Programming
     url: https://link.springer.com/journal/10107
-    
+jhep:
+    title: Journal of High Energy Physics
+    url: https://www.springer.com/journal/13130
+spie-opt:
+    title: SPIE Optical Engineering + Applications    
+    url: https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11137.toc
+israel:
+    title: Israel Journal of Mathematics
+    url: https://www.springer.com/journal/11856

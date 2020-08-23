@@ -118,14 +118,16 @@ layout: default
 {% if page.type=="journal" %}
 <div class="bibtex">
 {% capture bibtex %}
-    @Article{ {% for author in page.authors %}{% assign author_h = site.data.authors[author] %}{% assign names = author_h.name | split:' ' %}{% for name in names %}{% if forloop.last %}{{ name }}{% endif %}{% endfor %}{% if forloop.length >= 2 %}_{% endif %}{% endfor %}{% assign titlewords = page.title | split: ' ' %}{% for word in titlewords %}{% if forloop.first %}{{ word }}{% endif %}{% endfor %}{{page.year}},
-      author = "{% for author in page.authors %}{% assign author_h = site.data.authors[author] %}{{author_h.name}}{% unless forloop.last %} and {% endunless %}{% endfor %}",
-      title = "{{ page.title }}",
+    @{% if page.editors %}InProceedings{% else %}Article{% endif %}{ {% for author in page.authors %}{% assign author_h = site.data.authors[author] %}{% assign names = author_h.name | split:' ' %}{% for name in names %}{% if forloop.last %}{{ name }}{% endif %}{% endfor %}{% if forloop.length >= 2 %}_{% endif %}{% endfor %}{% assign titlewords = page.title | split: ' ' %}{% for word in titlewords %}{% if forloop.first %}{{ word }}{% endif %}{% endfor %}{{page.year}},
+      author = "{% for author in page.authors %}{% assign author_h = site.data.authors[author] %}{{author_h.name}}{% unless forloop.last %} and {% endunless %}{% endfor %}",{% if page.editors %}
+      editor = "{{ page.editors }}",{% endif %}
+      title = "{{ page.title }}",{% if page.booktitle %}
+      booktitle = "{{ page.booktitle }}",{% endif %}
       year = "{{page.year}}",
-      journal = "{{journal.title}}",
-      volume = "{{page.volume}}",
-      number = "{{page.issue}}",
-      pages = "{{page.pages}}",
+      journal = "{{journal.title}}",{% if page.volume %}
+      volume = "{{page.volume}}",{% endif %}{% if page.issue %}
+      number = "{{page.issue}}",{% endif %}{% if page.pages %}
+      pages = "{{page.pages}}",{% endif %}
       doi = "{{page.doi}}"
     }
     {% endcapture %}{{ bibtex | markdownify }}
