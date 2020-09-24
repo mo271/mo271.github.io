@@ -90,7 +90,7 @@ layout: default
                         {% if page.arxiv or page.doi %}
                             <span class="paper-text-sep">•</span>
                         {% endif %}
-                      <a href="{{page.fulltexturl}}">PDF</a>
+                      <a href="{{page.fulltexturl}}">journal</a>
                       {% endif %}
                     {% if page.localpdf %}
                         {% if page.arxiv or page.doi or page.fulltexturl%}
@@ -118,7 +118,7 @@ layout: default
 {% if page.type=="journal" %}
 <div class="bibtex">
 {% capture bibtex %}
-    @{% if page.editors %}InProceedings{% else %}Article{% endif %}{ {% for author in page.authors %}{% assign author_h = site.data.authors[author] %}{% assign names = author_h.name | split:' ' %}{% for name in names %}{% if forloop.last %}{{ name }}{% endif %}{% endfor %}{% if forloop.length >= 2 %}_{% endif %}{% endfor %}{% assign titlewords = page.title | split: ' ' %}{% for word in titlewords %}{% if forloop.first %}{{ word }}{% endif %}{% endfor %}{{page.year}},
+    @{% if page.editors %}InProceedings{% else %}Article{% endif %}{ {% if page.latexname %}{{page.latexname}}{% else %}{% for author in page.authors %}{% assign author_h = site.data.authors[author] %}{% assign names = author_h.name | split:' ' %}{% for name in names %}{% if forloop.last %}{{ name }}{% endif %}{% endfor %}{% if forloop.length >= 2 %}_{% endif %}{% endfor %}{% assign titlewords = page.title | split: ' ' %}{% for word in titlewords %}{% if forloop.first %}{{ word }}{% endif %}{% endfor %}{% endif %}{{page.year}},
       author = "{% for author in page.authors %}{% assign author_h = site.data.authors[author] %}{{author_h.name}}{% unless forloop.last %} and {% endunless %}{% endfor %}",{% if page.editors %}
       editor = "{{ page.editors }}",{% endif %}
       title = "{{ page.title }}",{% if page.booktitle %}

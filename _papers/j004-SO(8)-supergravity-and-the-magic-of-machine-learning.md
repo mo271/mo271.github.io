@@ -9,7 +9,8 @@ authors:
     - iulia
     - moritz
     - thomas
-browsertitle: SO(8) supergravity and the magic of machine learning 
+browsertitle: SO(8) supergravity and the magic of machine learning
+latexname: "CFF-SO(8)" 
 title: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>O</mi><mo>(</mo><mn>8</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">SO(8)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">8</span><span class="mclose">)</span></span></span></span> supergravity and the magic of machine learning
 year: 2019
 issue: 8-57
