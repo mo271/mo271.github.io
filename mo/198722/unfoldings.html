@@ -170,7 +170,7 @@ pagestyle: empty
 						// make a list item
 						var element = document.createElement( "div" );
 						element.className = "list-item";
-						element.innerHTML = template.replace( '$', i + 1 );
+						element.innerHTML = template.replace( '$', '<a href="./tilings/plots/' + (i + 1) + '.html">' + (i + 1) + '</a>' );
 
 						// Look up the element that represents the area
 						// we want to render the scene
