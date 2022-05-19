@@ -214,13 +214,16 @@ pre {
         }
     }
 }
-.twitter-icon{
+.icon--twitter{
 
     > svg {
         height: 14px;
         width: 14px;
     }
     vertical-align: text-top;
+    path {
+            fill: $grey-color;
+        }
 }
 .icon--github{
 
