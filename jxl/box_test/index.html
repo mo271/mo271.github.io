@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JXL box tests</title>
+  </head>
+
+<body>
+    This contains jxl images with various kinds of boxes, some with three junk bytes added after the codestream.
+
+    <table>
+        <tr>
+            <td>box type</td>
+            <td>no junk</td>
+            <td>with junk</td>
+        </tr>
+        <tr>
+            <td>0 Do not use box format at all, only pure codestream</td>
+            <td><img src="./boxes_type0.jxl"></td>
+            <td><img src="./boxes_type0_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>1 Have a single codestream box, with its actual size given in the box</td>
+            <td><img src="./boxes_type1.jxl"></td>
+            <td><img src="./boxes_type1_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>2 Have a single codestream box, with box size 0 (final box running to end)</td>
+            <td><img src="./boxes_type2.jxl"></td>
+            <td><img src="./boxes_type2_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>3 Single codestream box, with another unknown box behind it</td>
+            <td><img src="./boxes_type3.jxl"></td>
+            <td><img src="./boxes_type3_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>4 Have multiple partial codestream boxes</td>
+            <td><img src="./boxes_type4.jxl"></td>
+            <td><img src="./boxes_type4_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>5 Have multiple partial codestream boxes, with final box size 0 (running to end)</td>
+            <td><img src="./boxes_type5.jxl"></td>
+            <td><img src="./boxes_type5_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>6  Have multiple partial codestream boxes, terminated by non-codestream box</td>
+            <td><img src="./boxes_type6.jxl"></td>
+            <td><img src="./boxes_type6_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>7 Have multiple partial codestream boxes, terminated by non-codestream box
+                that has its size set to 0 (running to end)</td>
+            <td><img src="./boxes_type7.jxl"></td>
+            <td><img src="./boxes_type7_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>8 Have multiple partial codestream boxes, and the first one has a content
+                 of zero length</td>
+            <td><img src="./boxes_type8.jxl"></td>
+            <td><img src="./boxes_type8_junk.jxl"></td>
+        </tr>
+        <tr>
+            <td>9 Have a compressed exif box before a regular codestream box</td>
+            <td><img src="./boxes_type9.jxl"></td>
+            <td><img src="./boxes_type9_junk.jxl"></td>
+        </tr>
+    </table>
+</body>
