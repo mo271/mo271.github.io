@@ -11429,7 +11429,7 @@ protokolle= (
 "sok": true,
 "datum": "1905-01-11",
 "dok": true,
-"name": "C. Runge?[nicht der Carl aus Berlin?]",
+"name": "C[arl David Tolmé] Runge",
 "titel": "Die Beziehungen zwischen den Spannungen eines elastischen Körpers.",
 "ktitel": ""
 },
