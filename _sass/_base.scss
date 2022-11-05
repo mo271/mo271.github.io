@@ -214,6 +214,17 @@ pre {
         }
     }
 }
+.icon--mastodon{
+
+    > svg {
+        height: 16px;
+        width: 16px;
+    }
+    vertical-align: text-top;
+    path {
+            fill: $grey-color;
+        }
+}
 .icon--twitter{
 
     > svg {
@@ -239,7 +250,7 @@ pre {
     }
 }
 img.guessaday-icon{
-    vertical-align: top;  
+    vertical-align: top;
 }
 /**
  * Description lists
