@@ -39,6 +39,11 @@ kramdown:
   input: GFM
 theme: minima
 
+webrick:
+  headers:
+    cross-origin-embedder-policy: require-corp
+    cross-origin-opener-policy: same-origin
+
 plugins:
   - jekyll-seo-tag
 
