@@ -1,0 +1,3 @@
+[submodule "swissgl"]
+	path = swissgl
+	url = https://github.com/google/swissgl.git
