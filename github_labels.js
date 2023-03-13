@@ -2,6 +2,8 @@
 
 const canvas1 = document.getElementById('colorcube');
 const canvas2 = document.getElementById('cubecut');
+canvas1.style.touchAction = "none";
+canvas2.style.touchAction = "none";
 const glsl1 = SwissGL(canvas1);
 const glsl2 = SwissGL(canvas2);
 
