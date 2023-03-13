@@ -104,6 +104,9 @@ A quick fix would be to change the `--lightness-threshold` to something a little
 
 Alternatively, when sticking with the `--lightness-threshold` one needs to do the correct calculations taking sRGB to linear RGB as described above.
 
+
+I submitted a bug report to GitHub; hopefully it gets fixed soon!
+
 ------
 
 Animations made with <a href="https://github.com/google/swissgl">SwissGL</a> with the help of [Alexander Mordvintsev](https://znah.net).
