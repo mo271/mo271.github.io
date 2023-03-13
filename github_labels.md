@@ -3,9 +3,6 @@ layout: swissgl
 ---
 # Why some GitHub labels illegible
 
-> **Alert**
-> Work in progress...
-
 > **Note**
 > This represents the state of GitHub labels on 2023-03-11, which might have been fixed in the
 > meantime.
@@ -57,7 +54,6 @@ We start with an sRGB color cube, with can be visualized like that:
 
 The value where perceived-lightness equals the lightness-threshold is a plane cutting through the cube:
 
-[TODO: fix animation of hyperplane intersection cube]
 <div id="demo">
   <canvas id="cubecut" width="740" height="740"></canvas>
 </div>
@@ -92,7 +88,7 @@ This is one problem with the color of the text of the labels. Another problem th
 
 ![Two unreadable github labels](assets/images/github_labels/unreadable_labels.png)
 
-You can take a look at those labels in a [test repo](https://github.com/mo271/label_colors_test/labels). In Dark mode they render fine, I suppose, but in Light mode they are the most illegible label I could find.
+You can take a look at those labels in a [test repo](https://github.com/mo271/label_colors_test/labels). In the Light default theme they are the most illegible label I could find. In Dark default theme they render fine, which might lead to people actually picking those color for their labels, even when there is a preview in the user interface.
 
 ## The solution...
 
