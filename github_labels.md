@@ -110,6 +110,6 @@ Alternatively, when sticking with the `--lightness-threshold` one needs to do th
 
 ------
 
-Animation made with <a href="https://github.com/google/swissgl">SwissGL</a> with the help of [Alexander Mordvintsev](https://znah.net).
+Animations made with <a href="https://github.com/google/swissgl">SwissGL</a> with the help of [Alexander Mordvintsev](https://znah.net).
 
 <script src='{{site.baseurl}}/github_labels.js'></script>

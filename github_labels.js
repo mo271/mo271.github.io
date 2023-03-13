@@ -76,7 +76,7 @@ function render2(t) {
             out0 = mix(vec4(color, opacity), vec4(0,0,0,1), sqrt(edge));
         }`);
     }
-    cube(glsl2, {Clear:1, opacity:0.25, Face:'back', ...viewParams2});
+    cube(glsl2, { ...viewParams2, Clear:1, opacity:0.25, Face:'back'});
     glsl2({...viewParams2, Aspect:'fit'}, include + `
         //VERT
         const vec3 Verts[4] = vec3[4](
@@ -90,7 +90,8 @@ function render2(t) {
         void fragment() {
             out0 = vec4(color,1.0);
     }`);
-    cube(glsl2, {opacity:0.0, Face:'front', ...viewParams2});
+    cube(glsl2, {...viewParams2, opacity:0.0, Face:'front'});
+    requestAnimationFrame(render2);
 }
 let prevPos1 = { x: 0, y: 0 };
 let prevPos2 = { x: 0, y: 0 };
@@ -108,8 +109,8 @@ function handlePointerMove(camera, prevPos,  e) {
     camera.set([yaw, pitch, dist]);
 }
 
-canvas1.addEventListener('pointermove', e=>{handlePointerMove(viewParams1.cameraYPD1, prevPos1,  e);});
-canvas2.addEventListener('pointermove', e=>{handlePointerMove(viewParams2.cameraYPD2, prevPos2, e);});
+canvas1.addEventListener('pointermove', e=>{handlePointerMove(viewParams1.cameraYPD1, prevPos1, e)});
+canvas2.addEventListener('pointermove', e=>{handlePointerMove(viewParams2.cameraYPD2, prevPos2, e)});
 canvas1.addEventListener('pointerdown', e=>{
         if (!e.isPrimary) return;
         prevPos1.x = e.offsetX;
