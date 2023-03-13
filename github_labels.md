@@ -34,12 +34,12 @@ and essentially the text of the label will be colored white if `perceived-lightn
 Taking for example, taking the color `#3bb6b3 = (59, 182, 179)`, we get a `perceived-lightness` of `(0.2126*59 + 0.7152*182 +  0.0722*179)/255 = 0.6103...`, which is way above the threshold, hence the text for this color will be rendered in black.
 For different shades of the same color we calculate as follows:
 
-label color | decimal value    | `perceived-lightness` | `lightness-switch`| text color
-------------|------------------|-----------------------|-------------------|------------
- `#2b8685`  | `(43, 134, 133)` | `0.4493...`           | `1`               | `#ffffff`
- `#2b8786`  | `(43, 135, 134)` | `0.4524...`           | `0.5741...`       | `#929292`
- `#2c8786`  | `(44, 135, 134)` | `0.4532...`           | `0`               | `#000000`
- `#3bb6b3`  | `(59, 182, 179)` | `0.6103...`           | `0`               | `#000000`
+label color |  `perceived-lightness` | `lightness-switch`| text color
+------------|------------------------|-------------------|------------
+ `2b8685`   | `0.4493..`             | `1`               | `ffffff`
+ `2b8786`   | `0.4524..`             | `0.5741..`        | `929292`
+ `2c8786`   | `0.4532..`             | `0`               | `000000`
+ `3bb6b3`   | `0.6103..`             | `0`               | `000000`
 
 ![Four labels with different shades of the same color](assets/images/github_labels/four_labels.png)
 
