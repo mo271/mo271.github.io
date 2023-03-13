@@ -111,6 +111,7 @@ let prevPos1 = { x: 0, y: 0 };
 let prevPos2 = { x: 0, y: 0 };
 
 function handlePointerMove(camera, prevPos,  e) {
+    e.preventDefault();
     if (!e.isPrimary || e.buttons != 1) return;
     const { x: px, y: py } = prevPos;
     const { offsetX: x, offsetY: y } = e;
