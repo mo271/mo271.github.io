@@ -4,6 +4,20 @@ const canvas1 = document.getElementById('colorcube');
 const canvas2 = document.getElementById('cubecut');
 const glsl1 = SwissGL(canvas1);
 const glsl2 = SwissGL(canvas2);
+
+
+function resizeCanvas(canvas) {
+  const containerWidth = canvas.parentElement.offsetWidth;
+  canvas.width = containerWidth;
+  canvas.height = containerWidth;
+}
+
+// Call resizeCanvas on page load and when the window is resized
+window.addEventListener('load', resizeCanvas(canvas1));
+window.addEventListener('resize', resizeCanvas(canvas1));
+window.addEventListener('load', resizeCanvas(canvas2));
+window.addEventListener('resize', resizeCanvas(canvas2));
+
 let viewParams1 = {
         cameraYPD1: new Float32Array(3),
     };

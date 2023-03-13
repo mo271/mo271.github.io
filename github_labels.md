@@ -49,13 +49,13 @@ Let’s look at the above formulas geometrically.
 We start with an sRGB color cube, with can be visualized like that:
 
 <div id="demo">
-  <canvas id="colorcube" width="740" height="740"></canvas>
+  <canvas id="colorcube"></canvas>
 </div>
 
 The value where perceived-lightness equals the lightness-threshold is a plane cutting through the cube:
 
 <div id="demo">
-  <canvas id="cubecut" width="740" height="740"></canvas>
+  <canvas id="cubecut"></canvas>
 </div>
 
 
