@@ -15,7 +15,7 @@ On GitHub, it's possible to select the color of a [label](https://docs.github.co
 In fact for most colors, the text on the label will be either black or white. Digging into the
 [CSS](https://github.githubassets.com/assets/global-7f117b5cfae4.cssjavascript) that is used for the Light theme, we find the logic to decide on the color of the text. Assuming the color of the
 label is in
-`--label-r`, `--label-g` and `--label-r`, we have
+`--label-r`, `--label-g` and `--label-b`, we have
 ```css
 --perceived-lightness: calc( ((var(--label-r) * 0.2126) + (var(--label-g) * 0.7152) + (var(--label-b) * 0.0722)) / 255 );
 --lightness-threshold: 0.453;
