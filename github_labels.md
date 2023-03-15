@@ -95,7 +95,7 @@ You can take a look at those labels in a [test repo](https://github.com/mo271/la
 ### ... for the problem with grey text:
 Never make the text color of labels grey, always decide for either white or black depending on that threshold, so change the code to something like
  ```
- --lightness-switch: calc(var(--perceived-lightness) < var(--lightness-threshold) ? 1 : 0);
+--lightness-switch: max(0, min(calc((1/(var(--lightness-threshold) - var(--perceived-lightness)))), 1));
  ```
 Probably also check first if `--lightness-switch` is used elsewhere in the code.
 ### ... for the problem with using the wrong color space:
