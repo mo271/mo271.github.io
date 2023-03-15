@@ -17,9 +17,9 @@ In fact for most colors, the text on the label will be either black or white. Di
 label is in
 `--label-r`, `--label-g` and `--label-r`, we have
 ```css
---perceived-lightness: calc( ((var(--label-r) * 0.2126) + (var(--label-g) * 0.7152)) / 255 )
---lightness-threshold: 0.453
---lightness-switch: max(0, min(calc((var(--perceived-lightness) - var(--lightness-threshold)) * -1000), 1))
+--perceived-lightness: calc( ((var(--label-r) * 0.2126) + (var(--label-g) * 0.7152) + (var(--label-b) * 0.0722)) / 255 );
+--lightness-threshold: 0.453;
+--lightness-switch: max(0, min(calc((var(--perceived-lightness) - var(--lightness-threshold)) * -1000), 1));
 ```
 and then the color for the font is determined by
 ```
