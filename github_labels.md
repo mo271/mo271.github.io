@@ -107,6 +107,25 @@ Alternatively, when sticking with the `--lightness-threshold` one needs to do th
 
 I submitted a bug report to GitHub; hopefully it gets fixed soon!
 
+> ** Update **
+> Turns out GitHub already seems to be working on a fix, great!
+
+Thinking more about how the problem with the linear RGB versus sRGB can be solved, I calculated a
+least_squares cubic polynomial approx to the function calculating luminance for values in the interval [0,1] and this can be used in CSS like this:
+```
+  --scaled-r: calc(var(--label-r)/255.0);
+  --scaled-g: calc(var(--label-g)/255.0);
+  --scaled-b: calc(var(--label-b)/255.0);
+  --linear-r: calc(0.002341 + var(--scaled-r) * (-0.00156 + var(--scaled-r) * (0.703407 + var(--scaled-r) * (0.296969))));
+  --linear-g: calc(0.002341 + var(--scaled-g) * (-0.00156 + var(--scaled-g) * (0.703407 + var(--scaled-g) * (0.296969))));
+  --linear-b: calc(0.002341 + var(--scaled-b) * (-0.00156 + var(--scaled-b) * (0.703407 + var(--scaled-b) * (0.296969))));
+  --perceived-lightness: calc(
+      ((var(--linear-r) * 0.2126 ) + (var(--linear-g) * 0.7152) + (var(--linear-b) * 0.0722)));
+```
+This should play well with a `--lightness-threshold` of around `0.18`.
+
+This is done because in calc in CSS there is not a good way that I know to use conditionals and also [pow function in CSS still seems to be experimental](https://developer.mozilla.org/en-US/docs/Web/CSS/pow#browser_compatibility). It needs the Horner scheme in evaluating the cubic, otherwise numerical trouble is expected.
+
 ------
 
 Animations made with <a href="https://github.com/google/swissgl">SwissGL</a> with the help of [Alexander Mordvintsev](https://znah.net).
