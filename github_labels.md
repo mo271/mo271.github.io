@@ -107,11 +107,11 @@ Alternatively, when sticking with the `--lightness-threshold` one needs to do th
 
 I submitted a bug report to GitHub; hopefully it gets fixed soon!
 
-> ** Update **
+> **Update**
 > Turns out GitHub already seems to be working on a fix, great!
 
 Thinking more about how the problem with the linear RGB versus sRGB can be solved, I calculated a
-least_squares cubic polynomial approx to the function calculating luminance for values in the interval [0,1] and this can be used in CSS like this:
+least squares cubic polynomial approximation to the function calculating luminance for values in the interval [0,1] and this can be used in CSS like this:
 ```
   --scaled-r: calc(var(--label-r)/255.0);
   --scaled-g: calc(var(--label-g)/255.0);
