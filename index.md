@@ -8,17 +8,19 @@ layout: default #changed from home
 {% include picture.md %}
 
 
+
+## Miscellanea
+
+  {% include misc.md %}
+
 ## Research
 
   {% include preprints.html %}
   {% include journalpapers.html %}
   {% include theses.html %}
-  {% include misc-research.md %}
+
 
 ## Teaching
 
   {% include teaching.md %}
 
-## Other projects
-
-  {% include misc.md %}
