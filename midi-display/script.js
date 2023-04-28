@@ -87,7 +87,8 @@ function renderNotes(notes, keySignature) {
     const keySignatureIndex = keySignatures.indexOf(keySignature);
     const keyDeviation = keySignatureIndex - 7;
     const sharps = ['F', 'C', 'G', 'D', 'A', 'E', 'B'];
-    const flats = sharps.reverse();
+    const flats = sharps.slice().reverse();
+    console.log(keyDeviation);
     accidentals = keyDeviation >= 0 ? sharps.slice(0, keyDeviation) : flats.splice(0, -keyDeviation);
     // Clear the canvas and create a new renderer
     console.log(keySignature);
@@ -127,7 +128,7 @@ function renderNotes(notes, keySignature) {
       });
 
       //chord.setExtraLeftPx(100);
-
+      console.log("accidentals", accidentals);
       // Add accidentals to the chord
       for (const [index, noteName] of noteNames.entries()) {
           if (noteName.includes('#') && (keyDeviation <= 0 | !accidentals.includes(noteName[0]))) {
