@@ -13,32 +13,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;
-  height: 400px;
+  width: calc(100%);
+  height: calc(100%);
   background-color: white;
   border: 1px solid black;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-#key-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-#key-select-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#key-container .arrow {
+.arrow {
   cursor: pointer;
-  margin: 0 10px;
+  font-size: 72px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.arrow, .symbol {
-  font-size: 36px;
+#prev-key {
+  left: 20px;
+}
+
+#next-key {
+  right: 20px;
 }
