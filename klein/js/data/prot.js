@@ -5881,7 +5881,7 @@ protokolle= (
 "sok": true,
 "datum": "1887-12-09",
 "dok": true,
-"name": "F[riedrich]. Schröder stud. math.?",
+"name": "J[ohannes]. Schröder stud. math.?",
 "titel": "",
 "ktitel": "Nullwerthe d[er]. elliptischen $\\theta$"
 },
@@ -5968,7 +5968,7 @@ protokolle= (
 "sok": true,
 "datum": "1888-07-13",
 "dok": true,
-"name": "F[riedich] Schröder, cand. math. ",
+"name": "J[ohannes] Schröder, cand. math. ",
 "titel": "Vortrag über die Bestimmung des Nullwerthes der geraden elliptischen $\\vartheta$-Functionen.",
 "ktitel": ""
 },
@@ -6004,7 +6004,7 @@ protokolle= (
 "sok": true,
 "datum": "    ?",
 "dok": false,
-"name": "F[riedrich] Schröder.",
+"name": "J[ohannes] Schröder.",
 "titel": "Nachtrag zum Vortrage vom 20.Juli 1888",
 "ktitel": ""
 },
@@ -6088,7 +6088,7 @@ protokolle= (
 "sok": true,
 "datum": "1889-02-23",
 "dok": true,
-"name": "F[riedrich] Schröder, cand. math.",
+"name": "J[ohannes] Schröder, cand. math.",
 "titel": "Ueber diejenigen algebraischen Gebilde, welche eindeutige Transformationen in sich zulassen.\\newline (Hurwitz, Göttinger Nachrichten, Jahrg[an]g 1887, p[agina]. 85)",
 "ktitel": ""
 },
