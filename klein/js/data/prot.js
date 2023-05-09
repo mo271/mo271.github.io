@@ -6064,7 +6064,7 @@ protokolle= (
 "sok": true,
 "datum": "1889-01-22",
 "dok": true,
-"name": "Alg Guldberg",
+"name": "Alf Guldberg",
 "titel": "Für jedes $p$ soll man die allgemeinste $3$ blättrige Riemannfläche mit einfachen Verzweigungspunkten aufstellen und die zugehörigen Integranden I Gattung hinschrie[!]ben.",
 "ktitel": ""
 },
