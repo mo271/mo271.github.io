@@ -5773,7 +5773,7 @@ protokolle= (
 "sok": false,
 "datum": "1887-07-01",
 "dok": true,
-"name": "[[Charles Harold] Berry]",
+"name": "[[Arthur] Berry]",
 "titel": "Differentialinvarianten, insbesondere Reciprocanten.",
 "ktitel": ""
 },
