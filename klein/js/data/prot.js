@@ -8247,7 +8247,7 @@ protokolle= (
 "sok": true,
 "datum": "1897-05-12",
 "dok": true,
-"name": "C[harles] H[arold] Berry",
+"name": "Charles H[arold] Berry",
 "titel": "Die conforme Abbildung der $z$-Ebene auf Kreisbogendreiecke durch rationale Funktionen.",
 "ktitel": ""
 },
