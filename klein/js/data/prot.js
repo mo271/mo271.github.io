@@ -12347,7 +12347,7 @@ protokolle= (
 "sok": true,
 "datum": "1907-01-06",
 "dok": true,
-"name": "Alfred Haar",
+"name": "Alfred [Alfréd] Haar",
 "titel": "Das [Bernhard] Riemann'sche Problem.",
 "ktitel": ""
 },
@@ -12359,7 +12359,7 @@ protokolle= (
 "sok": false,
 "datum": "1907-01-13",
 "dok": true,
-"name": "Alfred Haar",
+"name": "Alfred [Alfréd] Haar",
 "titel": "Das [Bernhard] Riemann'sche Problem.",
 "ktitel": ""
 },
@@ -12407,7 +12407,7 @@ protokolle= (
 "sok": true,
 "datum": "  20/2/1907",
 "dok": false,
-"name": "Afred Haar",
+"name": "Alfred [Alfréd] Haar",
 "titel": "[Ludwig] Schlesinger's Arbeiten über das [Bernhard] Riemann'sche Theorem.",
 "ktitel": ""
 },
@@ -13338,7 +13338,7 @@ protokolle= (
 "datum": "",
 "derror": "unbekannt",
 "dok": false,
-"name": "A[rthur Erich] Haas",
+"name": "Alfred [Alfréd] Haar",
 "titel": "Über endliche Elasticitätstheorie im Anschluß an die Arbeiten von E[ugène]. und F[rançois]. Cosserat",
 "ktitel": ""
 },
