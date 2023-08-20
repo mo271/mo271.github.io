@@ -10869,7 +10869,7 @@ protokolle= (
 "sok": true,
 "datum": "1903-12-09",
 "dok": true,
-"name": "Dr. M[?]. Lane?",
+"name": "Dr. M[ax von]. Laue",
 "titel": "Über Wellen.",
 "ktitel": ""
 },
@@ -10881,7 +10881,7 @@ protokolle= (
 "sok": false,
 "datum": "1903-12-16",
 "dok": true,
-"name": "Dr. M[?]. Lane?",
+"name": "Dr. M[ax von]. Laue",
 "titel": "",
 "ktitel": ""
 },
