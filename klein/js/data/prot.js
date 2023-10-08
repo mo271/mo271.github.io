@@ -12709,8 +12709,8 @@ protokolle= (
 "sok": true,
 "datum": "1907-12-18",
 "dok": true,
-"name": "Ad[?] Steicher?",
-"titel": "Stationäre Strömung incomressibler reibender Flüssigkeiten.",
+"name": "Ad[olf] Steichen",
+"titel": "Stationäre Strömung incompressibler reibender Flüssigkeiten.",
 "ktitel": ""
 },
 {
