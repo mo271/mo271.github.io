@@ -11016,7 +11016,7 @@ protokolle= (
 "sok": true,
 "datum": "1904-02-17",
 "dok": true,
-"name": "Dr. Hans Hahnr",
+"name": "Dr. Hans Hahn",
 "titel": "Theorie von [Joseph Valentin] Boussinesq und ihr Vergleich mit der Erfahrung",
 "ktitel": ""
 },
