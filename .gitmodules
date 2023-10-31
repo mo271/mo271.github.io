@@ -1,3 +1,6 @@
 [submodule "swissgl"]
 	path = swissgl
 	url = https://github.com/google/swissgl.git
+[submodule "klein"]
+	path = klein
+	url = https://github.com/mo271/klein.git
