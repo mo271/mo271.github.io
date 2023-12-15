@@ -1,46 +1,61 @@
 moritz:
     name: Moritz Firsching
-    url: https://mo271.github.io/ 
-thomas:
-    name: Thomas Fischbacher
-iulia:
-    name: Iulia M. Comșa
-    url: https://sites.google.com/view/iuliacomsa/
-krzysztof:
-    name: Krzysztof Potempa
-luca:
-    name: Luca Versari
-jyrki:
-    name: Jyrki Alakuijala
-    url: https://research.google/people/105344/
-jens:
-    name: Jens Hornbostel
-    url: https://www.math.uni-wuppertal.de/~hornbost/
-günter:
-    name: Günter M. Ziegler
-    url: http://www.mi.fu-berlin.de/math/groups/discgeom/ziegler
+    url: https://mo271.github.io/
+akhil:
+    name: Akhil Verghese
 alexander:
     name: Alexander Rhatushnyaki
     url: http://imagecompression.info/gralic/LPCB.html
+connal:
+    name: Connal de Souza
+david:
+    name: David H. Park
+ekin:
+    name: Ekin Dogus Cubuk
+    url: https://research.google/people/ekin-dogus-cubuk/
+esteban:
+    name: Esteban Real
+    url: https://www.estebanreal.com/
+evgenii:
+    name:  Evgenii Kliuchnikov
+günter:
+    name: Günter M. Ziegler
+    url: http://www.mi.fu-berlin.de/math/groups/discgeom/ziegler
+iulia:
+    name: Iulia M. Comșa
+    url: https://sites.google.com/view/iuliacomsa/
 jan:
-    name: Jan Wassenberg 
+    name: Jan Wassenberg
     url: http://wassenberg.dreamhosters.com/
+jens:
+    name: Jens Hornbostel
+    url: https://www.math.uni-wuppertal.de/~hornbost/
+jyrki:
+    name: Jyrki Alakuijala
+    url: https://research.google/people/105344/
 jon:
     name: Jon Sneyers
     url: http://sneyers.info/
+krzysztof:
+    name: Krzysztof Potempa
 lode:
-    name: Lode Vandevenne 
+    name: Lode Vandevenne
     url: https://lodev.org/
-robert:
-    name: Robert Obryk
-zoltan:
-    name: Zoltan Szabadka
-evgenii: 
-    name:  Evgenii Kliuchnikov
+luca:
+    name: Luca Versari
+manav:
+    name: Manav Garg
+mirko:
+    name: Mirko Rossini
 martin:
     name: Martin Bruse
+quoc:
+    name: Quoc V. Le
+    url: https://cs.stanford.edu/~quocle/
 renata:
     name: Renata Khasanova
+robert:
+    name: Robert Obryk
 ruud:
     name: Ruud van Asseldonk
     url: https://ruudvanasseldonk.com
@@ -48,3 +63,9 @@ sami:
     name: Sami Boukortt
 sebastian:
     name: Sebastian Gomez
+thomas:
+    name: Thomas Fischbacher
+yao:
+    name: Yao Chen
+zoltan:
+    name: Zoltan Szabadka
