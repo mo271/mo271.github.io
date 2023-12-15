@@ -13,7 +13,7 @@ authors:
     - quoc
     - ekin
     - david
-title: AutoNumerics-Zero: Automated Discovery of State-of-the-Art Mathematical Functions
+title: "AutoNumerics-Zero: Automated Discovery of State-of-the-Art Mathematical Functions"
 year: 2023
 ---
 
