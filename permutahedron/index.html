@@ -82,6 +82,18 @@
 
     // Add event listener for click events
     renderer.domElement.addEventListener('click', onCanvasClick);
+    renderer.domElement.addEventListener('touchstart', function(event) {
+
+        // Mimic a mouse click event from the first touch point
+        var touch = event.touches[0];
+        var mouseEvent = new MouseEvent('click', {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+        });
+
+        // Call existing function with this synthetic mouse event
+        onCanvasClick(mouseEvent);
+    }, { passive: false });
 
     function onCanvasClick(event) {
         // Mouse position in normalized device coordinates (NDC)
