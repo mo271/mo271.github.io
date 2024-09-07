@@ -1,0 +1,150 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents scrolling on the outer page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up full height */
+}
+
+h1 {
+    font-size: 24px;
+    margin: 20px 20px 10px 20px;
+}
+
+p {
+    font-size: 16px;
+    margin: 0 20px 20px 20px;
+}
+
+/* Container for the input and button, aligned horizontally */
+#inputContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 20px 15px 20px;
+    gap: 10px; /* Spacing between input and button */
+}
+
+/* Input and Button Styles */
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    flex: 1; /* Takes remaining space in flex layout */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Links and Share Container */
+#extractedLinks {
+    margin: 0px;
+    font-size: 16px;
+}
+
+/* Comments Container */
+#commentsContainer {
+    flex-grow: 1; /* Takes up available vertical space */
+    margin: 0 20px 20px 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Enable scrolling inside the comments container */
+    max-height: calc(100vh - 250px); /* Ensure max height to avoid overflow */
+}
+
+/* Comments Box for each .tex file */
+#commentsContainer pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+/* Typography for headers in comments */
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin: 10px;
+    }
+
+    p, #extractedLinks {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    /* Stack input and button vertically */
+    #inputContainer {
+        flex-direction: column;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}
+.tex sub, .latex sub, .latex sup {
+    text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+    vertical-align: -0.5ex;
+    margin-left: -0.1667em;
+    margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+    font-size: 1em;
+}
+
+.latex sup {
+    font-size: 0.85em;
+    vertical-align: 0.15em;
+    margin-left: -0.36em;
+    margin-right: -0.15em;
+}
