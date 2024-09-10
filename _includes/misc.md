@@ -6,6 +6,9 @@
 [Felix Klein Protokolle]({{site.baseurl}}/klein)
 : An index of seminars 1872 to 1912.
 
+[arXiv Comment Extractor]({{site.baseurl}}/arxiv-comments)
+: A convenient way to look at comments in .tex files of papers [arxiv.org](https://arxiv.org)
+
 [Formal BOOK](https://github.com/mo271/formal_book)
 : An attempt to formalize Proofs from THE BOOK using Lean.
 
