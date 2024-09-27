@@ -9,7 +9,7 @@
 [arXiv Comment Extractor]({{site.baseurl}}/arxiv-comments)
 : A convenient way to look at comments in .tex files of papers [arxiv.org](https://arxiv.org)
 
-[Formal BOOK](https://github.com/mo271/formal_book)
+[Formal BOOK]({{site.baseurl}}/FormalBook)
 : An attempt to formalize Proofs from THE BOOK using Lean.
 
 [Github Labels]({{site.baseurl}}/github_labels)
