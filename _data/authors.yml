@@ -6,6 +6,8 @@ akhil:
 alexander:
     name: Alexander Rhatushnyaki
     url: http://imagecompression.info/gralic/LPCB.html
+amnon:
+    name: Amnon Cohen-Tidhar
 connal:
     name: Connal de Souza
 david:
@@ -16,6 +18,8 @@ ekin:
 esteban:
     name: Esteban Real
     url: https://www.estebanreal.com/
+eric:
+    name: Eric Portis
 evgenii:
     name: Evgenii Kliuchnikov
 günter:
@@ -50,6 +54,8 @@ mirko:
     name: Mirko Rossini
 martin:
     name: Martin Bruse
+osamu:
+    name: Osamu Watanabe
 quoc:
     name: Quoc V. Le
     url: https://cs.stanford.edu/~quocle/
@@ -65,8 +71,12 @@ sami:
     url: https://research.google/people/sami-boukortt/
 sebastian:
     name: Sebastian Gomez
+tal:
+    name: Tal Lev-Ami
 thomas:
     name: Thomas Fischbacher
+thomas_richter:
+    name: Thomas Richter
 yao:
     name: Yao Chen
 zoltan:
