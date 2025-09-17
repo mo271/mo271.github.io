@@ -93,7 +93,22 @@ function displayRandomKey() {
     stave.addClef('treble').addKeySignature(selectedKey.keySig);
     stave.setContext(context).draw();
 
-    keyNameDisplay.textContent = selectedKey.name;
+    keyNameDisplay.textContent = getLocalizedKeyName(selectedKey.name);
+}
+
+function getBrowserLanguage() {
+    return navigator.language || navigator.userLanguage || 'en';
+}
+
+function getLocalizedKeyName(keyName) {
+    const lang = getBrowserLanguage();
+    if (lang.startsWith('de')) {
+        if (keyName === 'B') return 'H';
+        if (keyName === 'B♭') return 'B';
+        if (keyName === 'b') return 'h'; // minor
+        if (keyName === 'b♭') return 'b'; // minor
+    }
+    return keyName;
 }
 
 // Sidebar toggle
