@@ -36,3 +36,75 @@ body {
         font-size: 4vw;
     }
 }
+
+/* Menu Button */
+#menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+#close-sidebar-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.key-group h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.key-group div {
+    display: flex;
+    flex-direction: column;
+}
+
+.key-group label {
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.key-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.key-group h3 button {
+    font-size: 0.6em;
+    margin-left: 5px;
+    padding: 2px 5px;
+    cursor: pointer;
+}

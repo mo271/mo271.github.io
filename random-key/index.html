@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <button id="menu-btn" aria-label="Open Key Selection Menu">&#9776;</button>
+
+  <div id="sidebar">
+    <button id="close-sidebar-btn" aria-label="Close Menu">&times;</button>
+    <h2>Select Keys</h2>
+    <div class="key-group">
+      <h3>Major Keys <button class="select-all" data-type="major">All</button> <button class="select-none" data-type="major">None</button></h3>
+      <div id="major-keys-container"></div>
+    </div>
+    <div class="key-group">
+      <h3>Minor Keys <button class="select-all" data-type="minor">All</button> <button class="select-none" data-type="minor">None</button></h3>
+      <div id="minor-keys-container"></div>
+    </div>
+  </div>
+
   <div id="staff-container"></div>
   <div id="key-name"></div>
 
