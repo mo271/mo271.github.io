@@ -119,9 +119,44 @@ document.querySelectorAll('.select-none').forEach(button => {
     });
 });
 
+// Screen Wake Lock
+let wakeLock = null;
+
+const requestWakeLock = async () => {
+  if ('wakeLock' in navigator) {
+    try {
+      wakeLock = await navigator.wakeLock.request('screen');
+      wakeLock.addEventListener('release', () => {
+        console.log('Screen Wake Lock released');
+      });
+      console.log('Screen Wake Lock is active');
+    } catch (err) {
+      console.error(`${err.name}, ${err.message}`);
+    }
+  }
+};
+
+const releaseWakeLock = () => {
+  if (wakeLock !== null) {
+    wakeLock.release();
+    wakeLock = null;
+  }
+};
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    requestWakeLock();
+  } else {
+    releaseWakeLock();
+  }
+});
+
+window.addEventListener('beforeunload', releaseWakeLock);
+
 // Initial setup
 populateSidebar();
 displayRandomKey();
+requestWakeLock(); // Request wake lock on load
 
 // Update on click or resize
 staffContainer.addEventListener('click', displayRandomKey);
