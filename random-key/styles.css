@@ -3,23 +3,36 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: space-around; /* Distribute space */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
     margin: 0;
     background-color: #f4f4f4;
     text-align: center;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 #staff-container {
-    width: 300px;
-    height: 120px;
-    margin-bottom: 20px;
+    width: 90%; /* Responsive width */
+    height: 60%; /* Responsive height */
+    max-width: 800px; /* Max width to prevent it from being too wide */
+    max-height: 300px; /* Max height */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #key-name {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 8vw; /* Scale with viewport width */
+    margin-bottom: 5vh;
+}
+
+/* Adjust font size on larger screens */
+@media (min-width: 768px) {
+    #key-name {
+        font-size: 4vw;
+    }
 }
