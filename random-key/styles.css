@@ -26,15 +26,16 @@ body {
 }
 
 #key-name {
-    font-size: clamp(1.5em, 10vh, 3em); /* More height-aware clamp */
+    font-size: clamp(3em, 15vh, 6em); /* Larger and consistent size */
     margin-bottom: 2vh;
     line-height: 1.1;
+    width: auto; /* Ensure width adjusts to content */
 }
 
 /* Adjust font size on larger screens */
 @media (min-width: 768px) and (orientation: portrait) {
     #key-name {
-        font-size: clamp(1.8em, 6vw, 3em);
+        font-size: clamp(3em, 15vh, 6em);
     }
 }
 
@@ -51,7 +52,6 @@ body {
     }
     #key-name {
         width: 35%;
-        font-size: clamp(1.2em, 5vh, 2.5em); /* Smaller font in landscape */
         margin-bottom: 0;
     }
 }
