@@ -78,7 +78,8 @@ function displayRandomKey() {
     renderer.resize(containerWidth, containerHeight);
     const context = renderer.getContext();
 
-    const staveWidth = containerWidth * 0.35; // Further reduced width
+    const baseWidth = containerWidth * 0.8;
+    const staveWidth = Math.max(250, Math.min(baseWidth, 575)); // Min 250px, Max 575px
     const staveX = (containerWidth - staveWidth) / 2;
     const staveY = containerHeight * 0.1; // Adjust vertical position
 

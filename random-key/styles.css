@@ -13,10 +13,10 @@ body {
 }
 
 #staff-container {
-    width: 90%; /* Responsive width */
-    height: 60%; /* Responsive height */
-    max-width: 800px; /* Max width to prevent it from being too wide */
-    max-height: 300px; /* Max height */
+    width: 95%; /* More width on mobile */
+    height: 55%; /* Adjust height */
+    max-width: 1000px; /* Increased max-width */
+    max-height: 350px; /* Increased max-height */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -26,14 +26,33 @@ body {
 }
 
 #key-name {
-    font-size: 8vw; /* Scale with viewport width */
-    margin-bottom: 5vh;
+    font-size: clamp(1.5em, 10vh, 3em); /* More height-aware clamp */
+    margin-bottom: 2vh;
+    line-height: 1.1;
 }
 
 /* Adjust font size on larger screens */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
     #key-name {
-        font-size: 4vw;
+        font-size: clamp(1.8em, 6vw, 3em);
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #staff-container {
+        width: 60%;
+        height: 90%;
+        max-height: 90vh;
+    }
+    #key-name {
+        width: 35%;
+        font-size: clamp(1.2em, 5vh, 2.5em); /* Smaller font in landscape */
+        margin-bottom: 0;
     }
 }
 
