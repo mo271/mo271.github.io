@@ -15,10 +15,10 @@ function resizeCanvas(canvas) {
 }
 
 // Call resizeCanvas on page load and when the window is resized
-window.addEventListener('load', resizeCanvas(canvas1));
-window.addEventListener('resize', resizeCanvas(canvas1));
-window.addEventListener('load', resizeCanvas(canvas2));
-window.addEventListener('resize', resizeCanvas(canvas2));
+window.addEventListener('load', () => resizeCanvas(canvas1));
+window.addEventListener('resize', () => resizeCanvas(canvas1));
+window.addEventListener('load', () => resizeCanvas(canvas2));
+window.addEventListener('resize', () => resizeCanvas(canvas2));
 
 let viewParams1 = {
         cameraYPD1: new Float32Array(3),
