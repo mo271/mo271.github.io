@@ -57,21 +57,18 @@ function render1(t) {
     // TODO: consider animating a default rotation
     t /= 1000; // ms to sec
     glsl1({...viewParams1, Grid:[10,10,10], Clear:[0.992156, 0.992156, 0.992156, 1.0],
-            Aspect:'fit', DepthTest:1, AlphaCoverage:1}, createInclude('cameraYPD1') + `
-    //VERT
-    vec4 vertex() {
+            Aspect:'fit', DepthTest:1, AlphaCoverage:1,
+            Inc: createInclude('cameraYPD1'),
+            VP: `
         vec3 p = color = vec3(ID)/vec3(Grid-1);
         vec4 pos = vec4(p-0.5, 1);
         pos = wld2view(pos);
         pos.xy += XY*0.03;  // offset quad corners in view space
-        return view2proj(pos);
-    }
-    //FRAG
-    void fragment() {
+        VPos = view2proj(pos);`,
+            FP: `
         float r = length(XY);
         float alpha = smoothstep(1.0, 1.0-fwidth(r), r);
-        out0 = vec4(color, alpha);
-    }`);
+        FOut = vec4(color, alpha);`});
     requestAnimationFrame(render1);
 }
 function render2(t) {
@@ -80,32 +77,26 @@ function render2(t) {
     const include = createInclude('cameraYPD2');
     function cube(glsl, params) {
         glsl({...params, Grid:[6,1], Blend:`d*(1-sa)+s*sa`,
-        Aspect:'fit'}, include +`
-        //VERT
-        vec4 vertex() {
-            color = cubeVert(XY, ID.x)*0.5+0.5;
-            return wld2proj(vec4(color-0.5, 1.0));
-        }
-        //FRAG
-        void fragment() {
-            float edge = isoline(UV.x)+isoline(UV.y);
-            out0 = mix(vec4(color, opacity), vec4(0,0,0,1), sqrt(edge));
-        }`);
+        Aspect:'fit',
+        Inc: include,
+        VP: `
+        color = cubeVert(XY, ID.x)*0.5+0.5;
+        VPos = wld2proj(vec4(color-0.5, 1.0));`,
+        FP: `
+        float edge = isoline(UV.x)+isoline(UV.y);
+        FOut = mix(vec4(color, opacity), vec4(0,0,0,1), sqrt(edge));`});
     }
     cube(glsl2, { ...viewParams2, Clear:1, opacity:0.25, Face:'back'});
-    glsl2({...viewParams2, Aspect:'fit'}, include + `
-        //VERT
+    glsl2({...viewParams2, Aspect:'fit',
+        Inc: include,
+        VP: `
         const vec3 Verts[4] = vec3[4](
             vec3(1.0, -0.3982102908, 1.0), vec3(1.0, -0.1963087248, -1.0),
             vec3(-1.0, 0.1963087248, 1.0), vec3(-1.0, 0.3982102908, -1.0));
-        vec4 vertex() {
-            color = Verts[VID.x+VID.y*2]*0.5+0.5;;
-            return wld2proj(vec4(color-0.5, 1));
-        }
-        //FRAG
-        void fragment() {
-            out0 = vec4(color,1.0);
-    }`);
+        color = Verts[VID.x+VID.y*2]*0.5+0.5;;
+        VPos = wld2proj(vec4(color-0.5, 1));`,
+        FP: `
+        FOut = vec4(color,1.0);`});
     cube(glsl2, {...viewParams2, opacity:0.0, Face:'front'});
     requestAnimationFrame(render2);
 }
