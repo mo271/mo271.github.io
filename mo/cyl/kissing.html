@@ -1,32 +1,89 @@
 ---
 layout: default
 ---
-<script type="text/javascript" src="../../jmol/appletweb/Jmol.js"></script>
+<script type="text/javascript" src="../../jsmol/JSmol.min.js"></script>
 
 <h1><a href="http://mathoverflow.net/q/156008/39495">Kissing Cylinders</a></h1>
-  <form>
-  <table>
-<tr><td> <script type="text/javascript">
-      jmolInitialize("../../jmol/"); //    Use your own path here {#2}
-      jmolApplet(400, "load 6.jmol");
-    </script></td>
-<td  style="height: 100%;">
-<table  style="height: 100%;" >
-<tr><td><script language="JavaScript" type="text/javascript">jmolRadio('load 5.jmol', "", false);</script> 5 cylinders</td> </tr>
-<tr><td>6 cylinders<br>
-<table><tr><td><script language="JavaScript" type="text/javascript">jmolRadio('load 6.jmol', "", true);</script> radius 1</td> </tr>
-<tr><td><script language="JavaScript" type="text/javascript">jmolRadio('load 6b.jmol', "", false);</script> radius >1</td> </tr></table>
-<tr><td><script language="JavaScript" type="text/javascript">jmolRadio('load 7neu.jmol', "", false);</script> 7 cylinders</td> </tr>
-<tr><td>
-<script language="JavaScript" type="text/javascript">
-              jmolButton("spin on");
-              jmolButton("spin off");
+
+<script type="text/javascript">
+var jmolApplet0; 
+
+var Info = {
+	width: 400,
+	height: 400,
+	debug: false,
+	color: "0xFFFFFF",
+	addSelectionOptions: false,
+	use: "HTML5",
+	j2sPath: "../../jsmol/j2s",
+	readyFunction: null,
+	script: "load 6.jmol",
+	disableInitialConsole: true,
+	allowJavascript: true
+};
+
+function runJmolScript(script) {
+    Jmol.script(jmolApplet0, script);
+}
 </script>
-</td></tr>
 
+<form>
+<table>
+<tr>
+    <td>
+        <script type="text/javascript">
+            jmolApplet0 = Jmol.getApplet("jmolApplet0", Info);
+        </script>
+    </td>
+    <td style="height: 100%; vertical-align: top;">
+        <table style="height: 100%;">
+            <tr>
+                <td>
+                    <label>
+                        <input type="radio" name="model" onclick="runJmolScript('load 5.jmol')">
+                        5 cylinders
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6 cylinders<br>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="radio" name="model" checked onclick="runJmolScript('load 6.jmol')">
+                                    radius 1
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="radio" name="model" onclick="runJmolScript('load 6b.jmol')">
+                                    radius >1
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <input type="radio" name="model" onclick="runJmolScript('load 7neu.jmol')">
+                        7 cylinders
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="spin on" onclick="runJmolScript('spin on')">
+                    <input type="button" value="spin off" onclick="runJmolScript('spin off')">
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
 </table>
-
-</td></tr>
-</table>
-<p>You need to have <a href="http://java.com/getjava">java</a> installed and enabled in order to view this site.</p>
-  </form>
+</form>
