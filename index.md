@@ -9,16 +9,19 @@ layout: default #changed from home
 
 
 
-## Miscellanea
+## Mathematical Projects
 
-  {% include misc.md %}
+  {% include math_content.md %}
+
+## Tools, Games & Blog Posts
+
+  {% include software_content.md %}
 
 ## Research
 
   {% include preprints.html %}
   {% include journalpapers.html %}
   {% include theses.html %}
-
 
 ## Teaching
 

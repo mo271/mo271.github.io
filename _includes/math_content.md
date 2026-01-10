@@ -1,28 +1,16 @@
 {:.simple-deflist}
 
-[Guessaday]({{site.baseurl}}/guessaday)
-: A browser game and Android app to guess the day of the week for random dates.
+[Formal Conjectures](https://github.com/google-deepmind/formal-conjectures)
+: A collection of formalized statements of conjectures
 
 [Felix Klein Protokolle]({{site.baseurl}}/klein)
 : An index of seminars 1872 to 1912.
-
-[arXiv Comment Extractor]({{site.baseurl}}/arxiv-comments)
-: A convenient way to look at comments in .tex files of papers [arxiv.org](https://arxiv.org)
-
-[Formal BOOK]({{site.baseurl}}/FormalBook)
-: An attempt to formalize Proofs from THE BOOK using Lean.
-
-[Github Labels]({{site.baseurl}}/github_labels)
-: A bug report and explanation of how to choose a background color.
 
 [Classifications and realizations]({{site.baseurl}}/polytopes)
 : Combinatorial spheres, polytopes and oriented matroids.
 
 [Equiareal Triangulations]({{site.baseurl}}/equiarea)
 : Triangulations of the triangle with equal areas.
-
-[More terms of a sequence defined by Cloitre]({{site.baseurl}}/oeis/cloitre.pdf)
-: This is [A186253](https://oeis.org/A186253) in the OEIS.
 
 [Platonic inclusions]({{site.baseurl}}/platon)
 : A visualization of polyhedral containment.
@@ -35,3 +23,12 @@
 
 [Counting hypercube unfoldings](https://github.com/google-research/google-research/tree/master/cube_unfoldings)
 : Generating unfoldings of the hypercube.
+
+[Kummer](https://github.com/mo271/kummer)
+: Investigating divisibility properties of central binomial coefficients.
+
+[Formal BOOK]({{site.baseurl}}/FormalBook)
+: An attempt to formalize Proofs from THE BOOK using Lean.
+
+[More terms of a sequence defined by Cloitre]({{site.baseurl}}/oeis/cloitre.pdf)
+: This is [A186253](https://oeis.org/A186253) in the OEIS.
