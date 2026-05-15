@@ -1,6 +1,3 @@
-moritz:
-    name: Moritz Firsching
-    url: https://mo271.github.io/
 akhil:
     name: Akhil Verghese
 alexander:
@@ -8,6 +5,11 @@ alexander:
     url: http://imagecompression.info/gralic/LPCB.html
 amnon:
     name: Amnon Cohen-Tidhar
+blaise:
+    name: Blaise Agüera y Arcas
+    url: https://research.google/people/blaise-aguera-y-arcas/
+calle:
+    name: Calle Sönne
 connal:
     name: Connal de Souza
 david:
@@ -15,16 +17,23 @@ david:
 ekin:
     name: Ekin Dogus Cubuk
     url: https://research.google/people/ekin-dogus-cubuk/
+eric:
+    name: Eric Portis
+eric_wieser:
+    name: Eric Wieser
 esteban:
     name: Esteban Real
     url: https://www.estebanreal.com/
-eric:
-    name: Eric Portis
 evgenii:
     name: Evgenii Kliuchnikov
+fred:
+    name: Fred Zhang
 günter:
     name: Günter M. Ziegler
     url: http://www.mi.fu-berlin.de/math/groups/discgeom/ziegler
+hle_authors:
+    name: "I contributed only as dataset contributor, there 1000+ authors listed on arxiv, see link"
+    url: https://arxiv.org/abs/2501.14249
 iulia:
     name: Iulia M. Comșa
     url: https://sites.google.com/view/iuliacomsa/
@@ -34,12 +43,12 @@ jan:
 jens:
     name: Jens Hornbostel
     url: https://www.math.uni-wuppertal.de/~hornbost/
-jyrki:
-    name: Jyrki Alakuijala
-    url: https://research.google/people/105344/
 jon:
     name: Jon Sneyers
     url: http://sneyers.info/
+jyrki:
+    name: Jyrki Alakuijala
+    url: https://research.google/people/105344/
 krzysztof:
     name: Krzysztof Potempa
 lode:
@@ -50,12 +59,23 @@ luca:
     url: https://www.lucaversari.it/
 manav:
     name: Manav Garg
-mirko:
-    name: Mirko Rossini
 martin:
     name: Martin Bruse
+miklos:
+    name: Miklós Z Horváth
+mirko:
+    name: Mirko Rossini
+moritz:
+    name: Moritz Firsching
+    url: https://firsching.ch/
 osamu:
     name: Osamu Watanabe
+paul_lezeau:
+    name: Paul Lezeau
+    url: https://sites.google.com/corp/view/paul-lezeau/home
+pushmeet:
+    name: Pushmeet Kohli
+    url: https://research.google/people/pushmeet-kohli/
 quoc:
     name: Quoc V. Le
     url: https://cs.stanford.edu/~quocle/
@@ -66,6 +86,8 @@ robert:
 ruud:
     name: Ruud van Asseldonk
     url: https://ruudvanasseldonk.com
+salvatore:
+    name: Salvatore Mercuri
 sami:
     name: Sami Boukortt
     url: https://research.google/people/sami-boukortt/
@@ -75,12 +97,14 @@ tal:
     name: Tal Lev-Ami
 thomas:
     name: Thomas Fischbacher
+thomas_hubert:
+    name: Thomas Hubert
 thomas_richter:
     name: Thomas Richter
+yael:
+    name: Yaël Dillies
+    url: https://www.su.se/english/profiles/y/yadi8568
 yao:
     name: Yao Chen
 zoltan:
     name: Zoltan Szabadka
-hle_authors:
-    name: "I contributed only as dataset contributor, there 1000+ authors listed on arxiv, see link"
-    url: https://arxiv.org/abs/2501.14249
