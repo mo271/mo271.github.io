@@ -156,13 +156,16 @@ function displayRandomKey() {
     keyNameDisplay.textContent = getLocalizedKeyName(selectedKey.name);
 }
 
-function getBrowserLanguage() {
-    return navigator.language || navigator.userLanguage || 'en';
+function useGermanNotation() {
+    const lang = navigator.language || navigator.userLanguage;
+    if (!lang) {
+        return true; // Default to German if detection fails
+    }
+    return lang.toLowerCase().startsWith('de');
 }
 
 function getLocalizedKeyName(keyName) {
-    const lang = getBrowserLanguage();
-    if (lang.startsWith('de')) {
+    if (useGermanNotation()) {
         if (keyName === 'B') return 'H';
         if (keyName === 'B♭') return 'B';
         if (keyName === 'b') return 'h'; // minor
