@@ -98,7 +98,7 @@ function populateSidebar() {
         checkbox.addEventListener('change', updateAllowedKeys);
 
         label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(key.name));
+        label.appendChild(document.createTextNode(getLocalizedKeyName(key.name)));
 
         if (key.type === 'major') {
             majorKeysContainer.appendChild(label);
