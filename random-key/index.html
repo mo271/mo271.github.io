@@ -11,6 +11,22 @@
 
   <div id="sidebar">
     <button id="close-sidebar-btn" aria-label="Close Menu">&times;</button>
+    <h2>Settings</h2>
+    <div class="auto-change-group">
+      <label class="toggle-label" for="auto-change-toggle">
+        <span>Auto-change</span>
+        <input type="checkbox" id="auto-change-toggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <div class="interval-control" id="interval-control">
+        <label for="interval-input">Interval</label>
+        <div class="interval-input-row">
+          <input type="range" id="interval-range" min="0.5" max="10" step="0.5" value="1">
+          <input type="number" id="interval-input" min="0.5" max="60" step="0.5" value="1">
+          <span>s</span>
+        </div>
+      </div>
+    </div>
     <h2>Select Keys</h2>
     <div class="key-group">
       <h3>Major Keys <button class="select-all" data-type="major">All</button> <button class="select-none" data-type="major">None</button></h3>

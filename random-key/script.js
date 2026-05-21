@@ -177,3 +177,48 @@ requestWakeLock(); // Request wake lock on load
 staffContainer.addEventListener('click', displayRandomKey);
 keyNameDisplay.addEventListener('click', displayRandomKey);
 window.addEventListener('resize', displayRandomKey);
+
+// Auto-change timer
+const autoChangeToggle = document.getElementById('auto-change-toggle');
+const intervalRange = document.getElementById('interval-range');
+const intervalInput = document.getElementById('interval-input');
+const intervalControl = document.getElementById('interval-control');
+
+let autoChangeTimer = null;
+
+function startAutoChange() {
+    stopAutoChange();
+    const seconds = parseFloat(intervalInput.value) || 1;
+    autoChangeTimer = setInterval(displayRandomKey, seconds * 1000);
+}
+
+function stopAutoChange() {
+    if (autoChangeTimer !== null) {
+        clearInterval(autoChangeTimer);
+        autoChangeTimer = null;
+    }
+}
+
+autoChangeToggle.addEventListener('change', () => {
+    if (autoChangeToggle.checked) {
+        intervalControl.classList.add('active');
+        startAutoChange();
+    } else {
+        intervalControl.classList.remove('active');
+        stopAutoChange();
+    }
+});
+
+// Keep range and number inputs in sync, restart timer on change
+intervalRange.addEventListener('input', () => {
+    intervalInput.value = intervalRange.value;
+    if (autoChangeToggle.checked) startAutoChange();
+});
+
+intervalInput.addEventListener('input', () => {
+    const val = parseFloat(intervalInput.value);
+    if (val >= 0.5 && val <= 60) {
+        intervalRange.value = Math.min(val, 10); // clamp range slider
+        if (autoChangeToggle.checked) startAutoChange();
+    }
+});
