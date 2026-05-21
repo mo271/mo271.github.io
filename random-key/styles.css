@@ -231,3 +231,26 @@ body {
     font-size: 0.85em;
     color: #666;
 }
+
+/* Copy link button */
+#copy-link-btn {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 8px 12px;
+    background-color: #4a90d9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#copy-link-btn:hover {
+    background-color: #3a7bc8;
+}
+
+#copy-link-btn:active {
+    background-color: #2e6ab0;
+}

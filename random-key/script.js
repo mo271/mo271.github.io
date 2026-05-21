@@ -23,7 +23,67 @@ const keyOptions = [
   { keySig: 'B', name: 'g♯', type: 'minor' }, { keySig: 'F#', name: 'd♯', type: 'minor' }, { keySig: 'C#', name: 'a♯', type: 'minor' },
 ];
 
+// URL-safe key ID: keySig for major, keySig + 'm' for minor (e.g. "C", "Abm")
+function keyToId(key) {
+    return key.type === 'minor' ? key.keySig + 'm' : key.keySig;
+}
+
+function idToKey(id) {
+    const isMinor = id.endsWith('m') && id.length > 1;
+    const sig = isMinor ? id.slice(0, -1) : id;
+    const type = isMinor ? 'minor' : 'major';
+    return keyOptions.find(k => k.keySig === sig && k.type === type) || null;
+}
+
 let allowedKeys = [...keyOptions]; // By default, all keys are allowed
+
+// --- URL parameter handling ---
+
+function readStateFromURL() {
+    const params = new URLSearchParams(window.location.search);
+
+    // Read keys
+    const keysParam = params.get('keys');
+    if (keysParam !== null) {
+        const ids = keysParam.split(',').map(s => s.trim()).filter(Boolean);
+        const parsed = ids.map(idToKey).filter(k => k !== null);
+        if (parsed.length > 0) {
+            allowedKeys = parsed;
+        }
+    }
+
+    // Read auto-change
+    const autoParam = params.get('auto');
+    const intervalParam = params.get('interval');
+
+    return { autoParam, intervalParam };
+}
+
+function updateURL() {
+    const params = new URLSearchParams();
+
+    // Only store keys if not all selected
+    const allSelected = allowedKeys.length === keyOptions.length &&
+        keyOptions.every(k => allowedKeys.some(ak => ak.name === k.name));
+    if (!allSelected) {
+        params.set('keys', allowedKeys.map(keyToId).join(','));
+    }
+
+    // Auto-change
+    if (autoChangeToggle.checked) {
+        params.set('auto', '1');
+        const seconds = parseFloat(intervalInput.value) || 1;
+        if (seconds !== 1) {
+            params.set('interval', seconds.toString());
+        }
+    }
+
+    const qs = params.toString();
+    const newURL = window.location.pathname + (qs ? '?' + qs : '');
+    history.replaceState(null, '', newURL);
+}
+
+// --- End URL parameter handling ---
 
 function populateSidebar() {
     majorKeysContainer.innerHTML = '';
@@ -49,7 +109,7 @@ function populateSidebar() {
 }
 
 function updateAllowedKeys() {
-    const checkboxes = sidebar.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = sidebar.querySelectorAll('.key-group input[type="checkbox"]');
     allowedKeys = keyOptions.filter(key => {
         return Array.from(checkboxes).find(cb => cb.value === key.name && cb.checked);
     });
@@ -59,7 +119,7 @@ function updateAllowedKeys() {
         allowedKeys = [...keyOptions];
         alert("At least one key must be selected.");
     }
-    // TODO: Save to localStorage
+    updateURL();
     displayRandomKey(); // Update display with new set of keys
 }
 
@@ -168,16 +228,6 @@ document.addEventListener('visibilitychange', () => {
 
 window.addEventListener('beforeunload', releaseWakeLock);
 
-// Initial setup
-populateSidebar();
-displayRandomKey();
-requestWakeLock(); // Request wake lock on load
-
-// Update on click or resize
-staffContainer.addEventListener('click', displayRandomKey);
-keyNameDisplay.addEventListener('click', displayRandomKey);
-window.addEventListener('resize', displayRandomKey);
-
 // Auto-change timer
 const autoChangeToggle = document.getElementById('auto-change-toggle');
 const intervalRange = document.getElementById('interval-range');
@@ -199,20 +249,27 @@ function stopAutoChange() {
     }
 }
 
-autoChangeToggle.addEventListener('change', () => {
-    if (autoChangeToggle.checked) {
+function setAutoChangeUI(enabled) {
+    autoChangeToggle.checked = enabled;
+    if (enabled) {
         intervalControl.classList.add('active');
         startAutoChange();
     } else {
         intervalControl.classList.remove('active');
         stopAutoChange();
     }
+}
+
+autoChangeToggle.addEventListener('change', () => {
+    setAutoChangeUI(autoChangeToggle.checked);
+    updateURL();
 });
 
 // Keep range and number inputs in sync, restart timer on change
 intervalRange.addEventListener('input', () => {
     intervalInput.value = intervalRange.value;
     if (autoChangeToggle.checked) startAutoChange();
+    updateURL();
 });
 
 intervalInput.addEventListener('input', () => {
@@ -220,5 +277,45 @@ intervalInput.addEventListener('input', () => {
     if (val >= 0.5 && val <= 60) {
         intervalRange.value = Math.min(val, 10); // clamp range slider
         if (autoChangeToggle.checked) startAutoChange();
+        updateURL();
     }
 });
+
+// Copy link button
+const copyLinkBtn = document.getElementById('copy-link-btn');
+if (copyLinkBtn) {
+    copyLinkBtn.addEventListener('click', () => {
+        updateURL();
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            const orig = copyLinkBtn.textContent;
+            copyLinkBtn.textContent = 'Copied!';
+            setTimeout(() => copyLinkBtn.textContent = orig, 1500);
+        });
+    });
+}
+
+// --- Initialization ---
+
+// Read URL params before populating UI
+const { autoParam, intervalParam } = readStateFromURL();
+
+populateSidebar();
+displayRandomKey();
+requestWakeLock();
+
+// Apply auto-change settings from URL
+if (intervalParam !== null) {
+    const val = parseFloat(intervalParam);
+    if (val >= 0.5 && val <= 60) {
+        intervalInput.value = val;
+        intervalRange.value = Math.min(val, 10);
+    }
+}
+if (autoParam === '1') {
+    setAutoChangeUI(true);
+}
+
+// Update on click or resize
+staffContainer.addEventListener('click', displayRandomKey);
+keyNameDisplay.addEventListener('click', displayRandomKey);
+window.addEventListener('resize', displayRandomKey);
