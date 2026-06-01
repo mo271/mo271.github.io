@@ -19,10 +19,7 @@
 : A visualization of cylinders kissing a sphere.
 
 [Hypercube unfoldings]({{site.baseurl}}/mo/198722/unfoldings)
-: 3d animations of all 261 unfodings of the 4-dimensional hypercube.
-
-[Counting hypercube unfoldings](https://github.com/google-research/google-research/tree/master/cube_unfoldings)
-: Generating unfoldings of the hypercube.
+: 3D animations of all 261 unfoldings of the 4-dimensional hypercube. See also [hypercube_unfoldings](https://github.com/mo271/hypercube_unfoldings) for counting unfoldings of higher-dimensional hypercubes.
 
 [Kummer](https://github.com/mo271/kummer)
 : Investigating divisibility properties of central binomial coefficients.
