@@ -1,5 +1,8 @@
 {:.simple-deflist}
 
+[BeeCounter]({{site.baseurl}}/BeeCounter)
+: Count the bees on a photo of a hive frame. Runs entirely in the browser; photos never leave your device.
+
 [Guessaday]({{site.baseurl}}/guessaday)
 : A browser game and Android app to guess the day of the week for random dates.
 
