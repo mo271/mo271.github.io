@@ -20,6 +20,25 @@ window.addEventListener('resize', () => resizeCanvas(canvas1));
 window.addEventListener('load', () => resizeCanvas(canvas2));
 window.addEventListener('resize', () => resizeCanvas(canvas2));
 
+// Page colours (light or dark scheme) read from the CSS custom properties in
+// css/main.scss, so the canvases blend into the page in both colour schemes.
+function cssColor(name) {
+    const hex = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    let m = hex.match(/^#([0-9a-f]{6})$/i);
+    if (m) return [0, 2, 4].map(i => parseInt(m[1].substr(i, 2), 16) / 255);
+    m = hex.match(/^#([0-9a-f]{3})$/i);
+    if (m) return [0, 1, 2].map(i => parseInt(m[1][i] + m[1][i], 16) / 255);
+    return null;
+}
+let pageColors = {};
+function updatePageColors() {
+    const bg = cssColor('--background-color') || [0.992156, 0.992156, 0.992156];
+    const fg = cssColor('--text-color') || [0, 0, 0];
+    pageColors = {Clear: [...bg, 1.0], edgeColor: fg};
+}
+updatePageColors();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updatePageColors);
+
 let viewParams1 = {
         cameraYPD1: new Float32Array(3),
     };
@@ -49,6 +68,7 @@ function createInclude(camera_name) {
         vec4 wld2proj(vec4 p) {
             return view2proj(wld2view(p));
         }
+        uniform vec3 edgeColor;
         varying vec3 color;
     `;
     return include;
@@ -56,7 +76,7 @@ function createInclude(camera_name) {
 function render1(t) {
     // TODO: consider animating a default rotation
     t /= 1000; // ms to sec
-    glsl1({...viewParams1, Grid:[10,10,10], Clear:[0.992156, 0.992156, 0.992156, 1.0],
+    glsl1({...viewParams1, Grid:[10,10,10], Clear:pageColors.Clear,
             Aspect:'fit', DepthTest:1, AlphaCoverage:1,
             Inc: createInclude('cameraYPD1'),
             VP: `
@@ -84,9 +104,9 @@ function render2(t) {
         VPos = wld2proj(vec4(color-0.5, 1.0));`,
         FP: `
         float edge = isoline(UV.x)+isoline(UV.y);
-        FOut = mix(vec4(color, opacity), vec4(0,0,0,1), sqrt(edge));`});
+        FOut = mix(vec4(color, opacity), vec4(edgeColor, 1), sqrt(edge));`});
     }
-    cube(glsl2, { ...viewParams2, Clear:1, opacity:0.25, Face:'back'});
+    cube(glsl2, { ...viewParams2, Clear:pageColors.Clear, edgeColor:pageColors.edgeColor, opacity:0.25, Face:'back'});
     glsl2({...viewParams2, Aspect:'fit',
         Inc: include,
         VP: `
@@ -97,7 +117,7 @@ function render2(t) {
         VPos = wld2proj(vec4(color-0.5, 1));`,
         FP: `
         FOut = vec4(color,1.0);`});
-    cube(glsl2, {...viewParams2, opacity:0.0, Face:'front'});
+    cube(glsl2, {...viewParams2, edgeColor:pageColors.edgeColor, opacity:0.0, Face:'front'});
     requestAnimationFrame(render2);
 }
 let prevPos1 = { x: 0, y: 0 };
