@@ -63,6 +63,7 @@ twitter:
 
 brandcolor:  2a7ae2
 backgroundcolor: fdfdfd
+darkbackgroundcolor: 1b1b1b  # page background when the visitor prefers a dark colour scheme
 greycolor: "828282"
 
 # Exclude from processing.

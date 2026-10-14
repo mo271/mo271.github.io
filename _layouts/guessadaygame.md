@@ -43,24 +43,24 @@ function check_id(element) {
    if(guessed_day == correct_day){
     for (var i = 0; i < childs.length; i++){
      if (childs[i].id != correct_day){
-       childs[i].style.color = "#{{ site.backgroundcolor }}";
+       childs[i].style.color = "transparent";
      }
      else {
-       childs[i].style.color = "#{{ site.brandcolor }}";
+       childs[i].style.color = "var(--brand-color)";
      }
     }
    }
    else {
      for (var i = 0; i < childs.length; i++){
       if (childs[i].id == correct_day){
-        childs[i].style.color = "#{{ site.brandcolor }}"
+        childs[i].style.color = "var(--brand-color)"
       }
       else if (childs[i].id == guessed_day){
-        childs[i].style.color = "#{{ site.greycolor }}";
+        childs[i].style.color = "var(--grey-color)";
         childs[i].style.textDecoration = "line-through";
       }
       else {
-        childs[i].style.color = "#{{ site.backgroundcolor }}";
+        childs[i].style.color = "transparent";
      }
     }
    }

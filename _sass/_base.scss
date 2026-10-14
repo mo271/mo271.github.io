@@ -93,12 +93,25 @@ a, .fakelink {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $brand-color-visited;
     }
 
     &:hover {
         color: $text-color;
         text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Horizontal rules
+ * (the browser default colour is near-white under a dark colour scheme;
+ * the light scheme keeps the browser default)
+ */
+@media (prefers-color-scheme: dark) {
+    hr {
+        border-color: $grey-color;
     }
 }
 
@@ -128,9 +141,9 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $code-border;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: $code-background;
 }
 
 code {

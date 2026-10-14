@@ -2,7 +2,7 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
+    background: $code-background;
     @extend %vertical-rhythm;
 
     .c     { color: #998; font-style: italic } // Comment
@@ -64,4 +64,31 @@
     .vg    { color: #008080 } // Name.Variable.Global
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+// Dark-palette overrides for tokens whose light colours are too dark to read
+// on a dark background. Only used when the visitor prefers a dark scheme.
+@media (prefers-color-scheme: dark) {
+    .highlight {
+        .c, .cm, .c1 { color: #8b949e }
+        .cp, .cs     { color: #8b949e }
+        .err         { color: #ffa198; background-color: #5c2a28 }
+        .gd          { color: #ffdcd7; background-color: #5c2a28 }
+        .gd .x       { color: #ffdcd7; background-color: #7a3230 }
+        .gi          { color: #aff5b4; background-color: #1f4a28 }
+        .gi .x       { color: #aff5b4; background-color: #2a6a36 }
+        .gr, .gt     { color: #ff7b72 }
+        .gp, .nn     { color: #a0a0a0 }
+        .kt, .nc     { color: #79c0ff }
+        .m, .mf, .mh, .mi, .mo, .il { color: #56d4dd }
+        .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 { color: #ffa198 }
+        .sr          { color: #7ee787 }
+        .ss          { color: #d2a8ff }
+        .na, .no, .nv, .vc, .vg, .vi { color: #4ec9b0 }
+        .nb          { color: #79c0ff }
+        .ne, .nf     { color: #ff9d7a }
+        .ni          { color: #d2a8ff }
+        .nt          { color: #7ee787 }
+        .w           { color: #555 }
+    }
 }
