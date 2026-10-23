@@ -51,9 +51,9 @@ defaults:
       path: ""
     values:
       image:
-        path: /assets/images/small_moritz.jpg
-        width: 768
-        height: 768
+        path: /assets/images/large_moritz.jpg
+        width: 1600
+        height: 2000
         alt: Photo of Moritz Firsching
 
 # Square photo: small card layout looks better than summary_large_image.

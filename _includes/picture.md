@@ -14,7 +14,7 @@
   <picture>
       <source srcset="{{ site.baseurl }}/assets/images/small_moritz.jxl" type="image/jxl">
       <source srcset="{{ site.baseurl }}/assets/images/small_moritz.jpg" type="image/jpeg">
-      <img id="profile-img" alt="Photo of Moritz" class="picture" src="{{ site.baseurl }}/assets/images/small_moritz.jpg" onload="updateProfileLink()">
+      <img id="profile-img" alt="Photo of Moritz" class="picture" width="480" height="600" src="{{ site.baseurl }}/assets/images/small_moritz.jpg" onload="updateProfileLink()">
   </picture>
 </a>
 </div>

@@ -399,7 +399,9 @@ h2.page-heading {
     .picture {
         float: right;
         max-width: 25%;
+        height: auto;
         margin-bottom:  $spacing-unit;
+        margin-left: $spacing-unit / 2;
     }
 
     .info {
@@ -421,7 +423,9 @@ h2.page-heading {
     }
 
     @include media-query($on-palm) {
-        display: none;
+        .picture {
+            max-width: 30%;
+        }
     }
 }
 /**
