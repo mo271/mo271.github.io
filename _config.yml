@@ -32,6 +32,8 @@ collections:
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 kramdown:
   input: GFM
 theme: minima

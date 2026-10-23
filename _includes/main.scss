@@ -1,6 +1,6 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
+// Main stylesheet. Inlined into every page by _includes/head.html via the
+// `scssify` filter, so there is no separate CSS request to block rendering.
+// Liquid is evaluated first, hence the {{ site.* }} colour values below.
 @charset "utf-8";
 
 
