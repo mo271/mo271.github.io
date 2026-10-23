@@ -8,6 +8,16 @@
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
+  /* On a dark page a black shadow is invisible; use a faint light rim and a
+     stronger shadow so the photo still lifts off the background. */
+  @media (prefers-color-scheme: dark) {
+    #profile-img {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35), 0 8px 24px rgba(0, 0, 0, 0.9);
+    }
+    #profile-link:hover #profile-img {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 14px 32px rgba(0, 0, 0, 0.9);
+    }
+  }
 </style>
 <div class="home-page-picture">
 <a id="profile-link" href="{{ site.baseurl }}/assets/images/large_moritz.jpg" title="Click to view full resolution image" target="_blank" rel="noopener noreferrer">
