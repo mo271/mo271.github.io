@@ -32,8 +32,8 @@ $light-background-color: #{{ site.backgroundcolor }};
 $light-brand-color:      #{{ site.brandcolor }};
 $light-brand-color-visited: darken($light-brand-color, 15%);
 $light-grey-color:       #{{ site.greycolor }};
-$light-grey-color-light: lighten($light-grey-color, 40%);
-$light-grey-color-dark:  darken($light-grey-color, 25%);
+$light-grey-color-light: #e8e8e8;   // rules and borders
+$light-grey-color-dark:  #424242;   // site title, emphasised muted text
 $light-code-background:  #eef;
 $light-code-border:      $light-grey-color-light;
 $light-border-strong:    #000;

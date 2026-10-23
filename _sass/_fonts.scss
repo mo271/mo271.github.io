@@ -1,2 +1,28 @@
-// Pull in the fonts we are using
-@import "biolinum";
+/**
+ * Linux Biolinum, subsetted (see _scripts/minimize_fonts.py), served as
+ * separate files so the stylesheet stays small. `font-display: swap` shows
+ * text in the fallback font until the webfont has arrived.
+ */
+@font-face {
+    font-family: 'Linux Biolinum';
+    src: url('/assets/fonts/LinBiolinum_R.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linux Biolinum';
+    src: url('/assets/fonts/LinBiolinum_RI.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linux Biolinum';
+    src: url('/assets/fonts/LinBiolinum_RB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,5 +1,6 @@
 ---
 layout: default
+language: de
 ---
 <h1><img class="guessaday-icon" alt="guessaday icon" src="{{ site.baseurl }}/assets/images/ic_launcher-web.png" width="45"/>  Guessaday</h1>
 <h2>Übe den Wochentag eines Datums zu bestimmen!

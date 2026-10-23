@@ -61,10 +61,10 @@ twitter:
   username: MoritzFirsching
   card: summary
 
-brandcolor:  2a7ae2
+brandcolor:  1e70da  # 4.7:1 on the light background (WCAG AA needs 4.5)
 backgroundcolor: fdfdfd
 darkbackgroundcolor: 1b1b1b  # page background when the visitor prefers a dark colour scheme
-greycolor: "828282"
+greycolor: "747474"  # 4.6:1 on the light background
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

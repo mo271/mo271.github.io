@@ -10,9 +10,10 @@
     <title>{% if page.browsertitle %}{{ page.browsertitle }}{% else %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
+    <link rel="preload" href="{{ "/assets/fonts/LinBiolinum_R.woff" | prepend: site.baseurl }}" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+    {% if page.katex %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">{% endif %}
     <link rel="icon" type="image/x-icon" href="{{ "/m.ico" | prepend: site.baseurl}}">
     {% seo %}
 </head>

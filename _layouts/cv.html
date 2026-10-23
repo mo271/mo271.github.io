@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.language | default: "en" }}">
     <!-- XXX: Feels like this could really be much 
                 more evolved.  Right now, it's in the 
         -->
     {% include head.html %}
 
     <body>
-        <div class="page-content">
-            <div class="wrapper cv-body" class="cv-body">
+        <main class="page-content">
+            <div class="wrapper cv-body">
                 {{content}}
             </div>
-        </div>
+        </main>
     </body>
 </html>

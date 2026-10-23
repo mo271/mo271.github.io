@@ -22,9 +22,11 @@
 <div class="home-page-picture">
 <a id="profile-link" href="{{ site.baseurl }}/assets/images/large_moritz.jpg" title="Click to view full resolution image" target="_blank" rel="noopener noreferrer">
   <picture>
-      <source srcset="{{ site.baseurl }}/assets/images/small_moritz.jxl" type="image/jxl">
-      <source srcset="{{ site.baseurl }}/assets/images/small_moritz.jpg" type="image/jpeg">
-      <img id="profile-img" alt="Photo of Moritz" class="picture" width="480" height="600" src="{{ site.baseurl }}/assets/images/small_moritz.jpg" onload="updateProfileLink()">
+      {% assign img = site.baseurl | append: "/assets/images/" %}
+      {% assign sizes = "(max-width: 600px) 30vw, (max-width: 800px) 25vw, 185px" %}
+      <source srcset="{{ img }}small_moritz-240.jxl 240w, {{ img }}small_moritz.jxl 480w" sizes="{{ sizes }}" type="image/jxl">
+      <source srcset="{{ img }}small_moritz-240.jpg 240w, {{ img }}small_moritz.jpg 480w" sizes="{{ sizes }}" type="image/jpeg">
+      <img id="profile-img" alt="Photo of Moritz" class="picture" width="480" height="600" src="{{ img }}small_moritz.jpg" onload="updateProfileLink()">
   </picture>
 </a>
 </div>
@@ -33,8 +35,9 @@ function updateProfileLink() {
     var img = document.getElementById('profile-img');
     var link = document.getElementById('profile-link');
     if (img && img.currentSrc && link) {
-        link.href = img.currentSrc.replace('small_', 'large_');
-        if (img.currentSrc.indexOf('.jxl') !== -1) {
+        var ext = img.currentSrc.split('.').pop();
+        link.href = '{{ site.baseurl }}/assets/images/large_moritz.' + ext;
+        if (ext === 'jxl') {
             link.title = 'Click to download full resolution image';
         }
     }

@@ -110,6 +110,15 @@
     margin-left: 0;
 }
 
+// Social icons on one line
+.social-media-list li {
+    display: inline-block;
+    margin-left: 14px;
+}
+.social-media-list li:first-child {
+    margin-left: 0;
+}
+
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
