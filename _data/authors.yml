@@ -11,7 +11,7 @@ alexander:
 amnon:
     name: Amnon Cohen-Tidhar
 andrew:
-    name: Andrew Ferrauiolo
+    name: Andrew Ferraiuolo
 anja:
     name: Anja Surina
 anton:
@@ -32,6 +32,8 @@ david:
 ekin:
     name: Ekin Dogus Cubuk
     url: https://research.google/people/ekin-dogus-cubuk/
+edward_lockhart:
+    name: Edward Lockhart
 eric:
     name: Eric Portis
 eric_wieser:
