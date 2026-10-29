@@ -3,7 +3,7 @@ layout: paper
 type: journal
 arxiv: "1407.0683"
 localpdf: ComputingMaximalCopies.pdf
-image: EMcover.jpg
+cover: EMcover.jpg
 doi:  10.1080/10586458.2014.956374
 journal: exp-math
 authors:

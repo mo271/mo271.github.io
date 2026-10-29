@@ -104,9 +104,9 @@ layout: default
         </table>
     </div>
   </header>
-{% if page.image %}
+{% if page.cover %}
 <div class="paper-image">
-<img alt="Picture for paper 'page.title'" class="picture" src="{{ site.baseurl }}/assets/images/papers/{{page.image}}">
+<img alt="Cover of {{ page.title | escape }}" class="picture" src="{{ site.baseurl }}/assets/images/papers/{{ page.cover }}">
 </div>
 {% endif %}
 {% assign lengthofcontent = content.size %}
