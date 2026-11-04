@@ -1,14 +1,24 @@
 ---
 layout: guessadaygame
 language: "en-US"
+weekstart: 0
 newsitetitle: Guessaday
 newtitlelink: guessaday
 title: Guessaday
-howtoplay: '<i>How to play:</i> Click on the correct day of the week for the random date displayed!
-</div><div><span>Click on the date or on the list of days to get a new date!</span>
-</div>
-<div><span>Check out <a href="!SITE_URL!">this site</a> for more information and an android app with much more options.</span>'
+description: "Play Guessaday online: guess the day of the week of a random date and train your mental calendar."
+alternates:
+  en: /guessaday/play/
+  de: /guessaday/play/de/
+image:
+  path: /assets/images/ic_launcher-web.png
+  width: 512
+  height: 512
+  alt: Guessaday icon
+howtoplay: '<p><i>How to play:</i> Click on the correct day of the week for the date shown, or press the keys 1 to 7. Afterwards, click on the date or on the days to get a new date.</p>
+<p>See <a href="!SITE_URL!">the Guessaday page</a> for tips on calculating the day of the week in your head, and for the Android app with many more options.</p>'
+newdatehint: "Click for a new date"
+dayslabel: "Days of the week"
+scorelabel: "correct"
 createdby: "Created by"
-twitterlink: https://twitter.com/intent/tweet?hashtags=guessaday&original_referer=http%3A%2F%2F127.0.0.1%3A4000%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&related=MoritzFirsching&text=Can%20you%20calculate%20the%20day%20of%20the%20week%20in%20your%20head%3F%20Check%20out%20this%20game!&url=https%3A%2F%2Ffirsching.ch%2Fguessaday%2F&via=MoritzFirsching
 ---
-<a class="select_language" href="{{ site.baseurl }}/guessaday/play/de">deutsche Version dieser Seite</a>
+<a class="select_language" href="{{ site.baseurl }}/guessaday/play/de/" hreflang="de" lang="de">deutsche Version dieser Seite</a>

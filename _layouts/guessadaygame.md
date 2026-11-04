@@ -1,113 +1,102 @@
 ---
 layout: special
-
 ---
 {% assign linkurl = site.baseurl | append: "/" | append: page.newtitlelink %}
-<div id="outer_div" class="game">
-<h1 id="randomdate"></h1>
-<ul id="date-table"><li id="0"></li><li id="1"></li><li id="2"></li><li id="3"></li><li id="4"></li><li id="5"></li><li id="6"></li></ul>
+<div class="game">
+<h1 id="randomdate" title="{{ page.newdatehint }}"></h1>
+<div id="date-table" role="group" aria-label="{{ page.dayslabel }}"></div>
+<p id="score" class="score" aria-live="polite"></p>
 </div>
-<div class="noprint"><div>
-{{ page.howtoplay | replace: '!SITE_URL!', linkurl  }}</div>
-</div><div class="noprint">
+<div class="noprint">
+{{ page.howtoplay | replace: '!SITE_URL!', linkurl }}
+</div>
+<div class="noprint">
 {{ content }}
 </div>
 <script>
-var correct_day = -1;
-var state = 0;
-function random_date() {
-var start = new Date(1900,0,1);
-var end = new Date(2050,11,31);
-var sunday = new Date(1985,10,3);
-var weekday = new Date(sunday);
-for (var i = 0; i < childs.length; i++){
-    childs[i].innerHTML = weekday.toLocaleDateString("{{ page.language }}", {weekday: 'long'});
-    childs[i].style.textDecoration = "none";
-    childs[i].style.color = "initial";
-    weekday.setDate(weekday.getDate() + 1);
+(function () {
+  var locale = "{{ page.language }}";
+  var weekStart = {{ page.weekstart | default: 0 }}; // 0 = Sunday first, 1 = Monday first
+  var scoreLabel = "{{ page.scorelabel }}";
+  var dateEl = document.getElementById("randomdate");
+  var table = document.getElementById("date-table");
+  var scoreEl = document.getElementById("score");
+  var buttons = [];
+  var correctDay = -1;
+  var revealed = false;
+  var correct = 0;
+  var total = 0;
+
+  // One button per weekday, in the order the locale expects.
+  var aSunday = new Date(1985, 10, 3);
+  for (var i = 0; i < 7; i++) {
+    var day = (weekStart + i) % 7;
+    var d = new Date(aSunday);
+    d.setDate(d.getDate() + day);
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("data-day", day);
+    b.textContent = d.toLocaleDateString(locale, { weekday: "long" });
+    b.addEventListener("click", onDayClick);
+    table.appendChild(b);
+    buttons.push(b);
   }
 
-var span = end.getTime() - start.getTime();
-var randomdate = new Date(start.getTime()+Math.floor(Math.random()*span));
-correct_day = randomdate.getDay();
-var options = { year: 'numeric', month: 'long', day: 'numeric' };
-console.log(randomdate);
-console.log(correct_day);
-document.getElementById("randomdate").innerHTML = randomdate.toLocaleDateString("{{ page.language }}", options);
-state = 0;
-}
+  function newDate() {
+    var start = new Date(1900, 0, 1);
+    var end = new Date(2050, 11, 31);
+    var randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    correctDay = randomDate.getDay();
+    dateEl.textContent = randomDate.toLocaleDateString(locale, { year: "numeric", month: "long", day: "numeric" });
+    buttons.forEach(function (b) {
+      b.className = "";
+    });
+    revealed = false;
+  }
 
-function check_id(element) {
-  var guessed_day = element.id;
-  if (state == 0){
-   if(guessed_day == correct_day){
-    for (var i = 0; i < childs.length; i++){
-     if (childs[i].id != correct_day){
-       childs[i].style.color = "transparent";
-     }
-     else {
-       childs[i].style.color = "var(--brand-color)";
-     }
+  function reveal(guess) {
+    revealed = true;
+    total++;
+    if (guess === correctDay) {
+      correct++;
     }
-   }
-   else {
-     for (var i = 0; i < childs.length; i++){
-      if (childs[i].id == correct_day){
-        childs[i].style.color = "var(--brand-color)"
-      }
-      else if (childs[i].id == guessed_day){
-        childs[i].style.color = "var(--grey-color)";
-        childs[i].style.textDecoration = "line-through";
-      }
-      else {
-        childs[i].style.color = "transparent";
-     }
+    buttons.forEach(function (b) {
+      var d = Number(b.getAttribute("data-day"));
+      b.classList.toggle("correct", d === correctDay);
+      b.classList.toggle("wrong", d === guess && guess !== correctDay);
+      b.classList.toggle("hidden", d !== correctDay && d !== guess);
+    });
+    scoreEl.textContent = correct + " / " + total + " " + scoreLabel;
+  }
+
+  function onDayClick(event) {
+    if (revealed) {
+      newDate();
+    } else {
+      reveal(Number(event.currentTarget.getAttribute("data-day")));
     }
-   }
-  }
-}
-
-
-document.getElementById("randomdate").addEventListener('click', function(){
-  {
-    random_date();
-    state = 0;
   }
 
-}, true);
+  dateEl.addEventListener("click", newDate);
+  table.addEventListener("click", function (event) {
+    // A click on the list beside the buttons also fetches a new date.
+    if (revealed && event.target === table) {
+      newDate();
+    }
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.altKey || event.ctrlKey || event.metaKey) {
+      return;
+    }
+    if (event.key >= "1" && event.key <= "7") {
+      buttons[Number(event.key) - 1].click();
+      event.preventDefault();
+    } else if (event.key === "n" || ((event.key === "Enter" || event.key === " ") && document.activeElement.tagName !== "BUTTON")) {
+      newDate();
+      event.preventDefault();
+    }
+  });
 
-document.getElementById("date-table").addEventListener('click', function() {
-  //console.log("außenstart"+state);
-  if (state == 1){
-    random_date();
-    state = 0;
-  }
-  else {
-    state = 1;
-  }
-  //console.log("außenend"+state);
-}, false);
-
-var childs = document.getElementById("date-table").childNodes;
-for (var i = 0; i < childs.length; i++){
-    childs[i].addEventListener('click', function() {
-    //  console.log("innenstart"+state);
-      check_id(this);
-    //console.log("innenend"+state);
-  }, true);
-    childs[i].addEventListener("mouseover", function( event ) {
-    // highlight the mouseover target
-    event.target.style.background = "#e8e8e8";
-  }, false);
-  childs[i].addEventListener("mouseout", function( event ) {
-  // highlight the mouseover target
-  event.target.style.background = "none";
-}, false);
-
-
-
-  }
-  random_date();
-
-
+  newDate();
+})();
 </script>

@@ -516,23 +516,42 @@ div.noprint {
 }
 
 #date-table{
-  margin:auto;
-  margin:auto;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
   font-size: 24px;
   cursor: pointer;
-  li{
-    list-style-type: none;
-    margin: 5;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-  li {
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
     border-bottom: 1px solid $grey-color-light;
+    border-radius: 0;
+    padding: 2px 25px;
+    cursor: pointer;
+  }
+  button:last-child {
+    border-bottom: none;
+  }
+  button:hover,
+  button:focus-visible {
+    background: $grey-color-light;
+  }
+  button.correct {
+    color: $brand-color;
+  }
+  button.wrong {
+    color: $grey-color;
+    text-decoration: line-through;
+  }
+  button.hidden {
+    color: transparent;
+  }
 }
-li:last-child
-{
-  border-bottom: none;
-}
+
+.score {
+  color: $grey-color;
+  min-height: 1.5em;
+  margin-top: $spacing-unit / 2;
+  margin-bottom: 0;
 }
