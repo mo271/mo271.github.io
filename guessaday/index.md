@@ -20,7 +20,7 @@ You can <a href="{{ site.baseurl }}/guessaday/play/">play the game online</a> or
 
 <a href="https://f-droid.org/packages/com.goltzkiste.guessaday/"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" width="155" height="60"></a>
 
-<p>Also available as an app in the <a href="https://jolla.com/">Jolla</a> store, and the <a href="https://github.com/mo271/guessaday">source code is on GitHub</a>.</p>
+<p>Also available as an app in the <a href="https://jolla.com/">Jolla</a> store, and the <a href="https://github.com/mo271/guessaday">source code is on GitHub</a>. The app collects no data; see the <a href="{{ site.baseurl }}/guessaday/privacy/">privacy policy</a>.</p>
 
 <p>If you have any questions or comments, feel free to <a href="{{ site.baseurl }}/contact/">contact</a> me. If you like the game, let me know on <a rel="me" href="https://mathstodon.xyz/{{ site.mastodon_username }}">Mastodon</a>!</p>
 
