@@ -549,15 +549,57 @@ div.noprint {
   }
 }
 
-// App store badges: same height, at least a quarter of that height of clear
-// space around each (Apple's badge guidelines), wrapping on narrow screens.
+// App store badges. Every badge is shown with the same visible height
+// ($badge-height) and the same clear space between them (the store guidelines
+// ask for at least a quarter of the badge height). The F-Droid badge and the
+// English Google Play badge are 646x250 images whose visible badge is 564x168
+// at offset 41/41; the German Google Play badge is 646x250 with the visible
+// badge spanning the full width from y=29 to y=221. The transparent margins
+// are pulled in with negative margins so the gap is what the eye sees.
+$badge-height: 50px;
 .store-badges {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
+  margin-bottom: $spacing-unit;
+  .store-badge {
+    display: block;
+    position: relative;
+  }
   img {
     display: block;
+    width: auto;
+    max-width: none; // the global max-width: 100% would squash the padded badges
+  }
+  .badge-padded {
+    height: $badge-height * 250 / 168;
+    margin: $badge-height * -41 / 168;
+  }
+  .badge-play-de {
+    height: $badge-height * 250 / 192;
+    margin: ($badge-height * -29 / 192) 0 ($badge-height * -29 / 192);
+  }
+  .badge-apple {
+    height: $badge-height;
+  }
+  // A store the app is not in yet: badge dimmed, label underneath.
+  .coming-soon {
+    cursor: default;
+    img {
+      filter: grayscale(1) opacity(0.5);
+    }
+    small {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      margin-top: 4px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1;
+      color: $grey-color;
+    }
   }
 }
 

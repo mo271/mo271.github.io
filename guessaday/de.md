@@ -21,8 +21,9 @@ Bei diesem Spiel wird ein Datum angezeigt und man soll den zugehörigen Wochenta
 Du kannst <a href="{{ site.baseurl }}/guessaday/play/de/">online spielen</a> oder mit einer App für Android oder iPhone. Bei der App kann man mehr Einstellungen vornehmen (Zeit stoppen, einen eigenen Zeitraum wählen, ...).
 
 <p class="store-badges">
-<a href="https://f-droid.org/packages/com.goltzkiste.guessaday/"><img src="https://f-droid.org/badge/get-it-on-de.png" alt="Jetzt bei F-Droid" width="155" height="60"></a>
-<a href="https://apps.apple.com/de/app/guessaday/id6834742403"><img src="{{ site.baseurl }}/assets/images/app-store-badge-de.svg" alt="Laden im App Store" width="180" height="60"></a>
+<a class="store-badge" href="https://f-droid.org/packages/com.goltzkiste.guessaday/"><img class="badge-padded" src="https://f-droid.org/badge/get-it-on-de.png" alt="Jetzt bei F-Droid" width="646" height="250"></a>
+<a class="store-badge" href="https://apps.apple.com/de/app/guessaday/id6834742403"><img class="badge-apple" src="{{ site.baseurl }}/assets/images/app-store-badge-de.svg" alt="Laden im App Store" width="120" height="40"></a>
+<span class="store-badge coming-soon" title="Demnächst bei Google Play"><img class="badge-play-de" src="{{ site.baseurl }}/assets/images/google-play-badge-de.png" alt="Jetzt bei Google Play (demnächst)" width="646" height="250"><small>demnächst</small></span>
 </p>
 
 <p>Ebenso verfügbar im <a href="https://jolla.com/">Jolla</a>-Store, und den <a href="https://github.com/mo271/guessaday">Quellcode gibt es auf GitHub</a>. Die App erhebt keine Daten, siehe <a href="{{ site.baseurl }}/guessaday/de/datenschutz/">Datenschutzerklärung</a>.</p>

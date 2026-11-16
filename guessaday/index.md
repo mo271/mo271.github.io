@@ -19,8 +19,9 @@ In this game, a date is displayed and you are asked what day of the week that da
 You can <a href="{{ site.baseurl }}/guessaday/play/">play the game online</a> or as an app for Android or iPhone. The app has more options (timing, choose your own date range, ...).
 
 <p class="store-badges">
-<a href="https://f-droid.org/packages/com.goltzkiste.guessaday/"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" width="155" height="60"></a>
-<a href="https://apps.apple.com/us/app/guessaday/id6834742403"><img src="{{ site.baseurl }}/assets/images/app-store-badge-en.svg" alt="Download on the App Store" width="180" height="60"></a>
+<a class="store-badge" href="https://f-droid.org/packages/com.goltzkiste.guessaday/"><img class="badge-padded" src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" width="646" height="250"></a>
+<a class="store-badge" href="https://apps.apple.com/us/app/guessaday/id6834742403"><img class="badge-apple" src="{{ site.baseurl }}/assets/images/app-store-badge-en.svg" alt="Download on the App Store" width="120" height="40"></a>
+<span class="store-badge coming-soon" title="Coming soon on Google Play"><img class="badge-padded" src="{{ site.baseurl }}/assets/images/google-play-badge-en.png" alt="Get it on Google Play (coming soon)" width="646" height="250"><small>coming soon</small></span>
 </p>
 
 <p>Also available as an app in the <a href="https://jolla.com/">Jolla</a> store, and the <a href="https://github.com/mo271/guessaday">source code is on GitHub</a>. The app collects no data; see the <a href="{{ site.baseurl }}/guessaday/privacy/">privacy policy</a>.</p>
