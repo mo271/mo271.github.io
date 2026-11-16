@@ -16,7 +16,7 @@ image:
   height: 512
   alt: Guessaday-Icon
 howtoplay: '<p><i>Spielanleitung:</i> Klicke auf den passenden Wochentag für das angezeigte Datum oder drücke die Tasten 1 bis 7. Klicke danach auf das Datum oder auf die Wochentage, um ein neues Datum zu bekommen.</p>
-<p>Auf <a href="!SITE_URL!">der Guessaday-Seite</a> findest Du Tipps zum Ausrechnen des Wochentags im Kopf und die Android-App mit vielen weiteren Optionen.</p>'
+<p>Auf <a href="!SITE_URL!">der Guessaday-Seite</a> findest Du Tipps zum Ausrechnen des Wochentags im Kopf und die Apps für Android und iPhone mit vielen weiteren Optionen.</p>'
 newdatehint: "Klicken für ein neues Datum"
 dayslabel: "Wochentage"
 scorelabel: "richtig"

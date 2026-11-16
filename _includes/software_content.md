@@ -4,7 +4,7 @@
 : Count the bees on a photo of a hive frame. Runs entirely in the browser; photos never leave your device.
 
 [Guessaday]({{site.baseurl}}/guessaday)
-: A browser game and Android app to guess the day of the week for random dates.
+: A browser game and Android/iPhone app to guess the day of the week for random dates.
 
 [arXiv Comment Extractor]({{site.baseurl}}/arxiv-comments)
 : A convenient way to look at comments in .tex files of [arxiv](https://arxiv.org) papers

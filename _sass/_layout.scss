@@ -549,6 +549,18 @@ div.noprint {
   }
 }
 
+// App store badges: same height, at least a quarter of that height of clear
+// space around each (Apple's badge guidelines), wrapping on narrow screens.
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  img {
+    display: block;
+  }
+}
+
 .score {
   color: $grey-color;
   min-height: 1.5em;

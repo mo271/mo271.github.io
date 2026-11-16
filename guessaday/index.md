@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Guessaday
-description: "Guessaday: a free game and Android app to practise calculating the day of the week of any date in your head."
+description: "Guessaday: a free game and app for Android and iPhone to practise calculating the day of the week of any date in your head."
 language: en
 alternates:
   en: /guessaday/
@@ -16,9 +16,12 @@ image:
 <h2>A trainer for calculating the day of the week of any given date</h2>
 
 In this game, a date is displayed and you are asked what day of the week that date is. Then your answer is checked.
-You can <a href="{{ site.baseurl }}/guessaday/play/">play the game online</a> or as an Android app. The app has more options (timing, choose your own date range, ...).
+You can <a href="{{ site.baseurl }}/guessaday/play/">play the game online</a> or as an app for Android or iPhone. The app has more options (timing, choose your own date range, ...).
 
+<p class="store-badges">
 <a href="https://f-droid.org/packages/com.goltzkiste.guessaday/"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" width="155" height="60"></a>
+<a href="https://apps.apple.com/us/app/guessaday/id6834742403"><img src="{{ site.baseurl }}/assets/images/app-store-badge-en.svg" alt="Download on the App Store" width="180" height="60"></a>
+</p>
 
 <p>Also available as an app in the <a href="https://jolla.com/">Jolla</a> store, and the <a href="https://github.com/mo271/guessaday">source code is on GitHub</a>. The app collects no data; see the <a href="{{ site.baseurl }}/guessaday/privacy/">privacy policy</a>.</p>
 

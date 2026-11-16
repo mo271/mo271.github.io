@@ -15,7 +15,7 @@ image:
   height: 512
   alt: Guessaday icon
 howtoplay: '<p><i>How to play:</i> Click on the correct day of the week for the date shown, or press the keys 1 to 7. Afterwards, click on the date or on the days to get a new date.</p>
-<p>See <a href="!SITE_URL!">the Guessaday page</a> for tips on calculating the day of the week in your head, and for the Android app with many more options.</p>'
+<p>See <a href="!SITE_URL!">the Guessaday page</a> for tips on calculating the day of the week in your head, and for the Android and iPhone apps with many more options.</p>'
 newdatehint: "Click for a new date"
 dayslabel: "Days of the week"
 scorelabel: "correct"
